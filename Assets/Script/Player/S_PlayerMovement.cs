@@ -69,7 +69,7 @@ public class S_PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             //Calculate the velocity of the jump and apply it to velocity
-            velocity.y = Mathf.Sqrt(jumpHeight * 2 * gravity)  * (-1);
+            velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity)  ;
         }
     }
 
