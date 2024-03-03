@@ -62,15 +62,6 @@ public class S_PlayerMovement : MonoBehaviour
 
         //Move the Player    Multiplied by the speed    And deltaTime to work with all frameRate
         controller.Move(move * speed * Time.deltaTime);
-
-
-        //Jump Section
-        //If jump button is press and the player is touching the ground
-        if (Input.GetButtonDown("Jump") && isGrounded)
-        {
-            //Calculate the velocity of the jump and apply it to velocity
-            velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity)  ;
-        }
     }
 
     private void PlayerGravity()
