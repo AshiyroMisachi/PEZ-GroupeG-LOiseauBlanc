@@ -10,8 +10,6 @@ public class S_PlayerMovement : MonoBehaviour
     [Header("Movement")]
     //speed value of the player
     public float speed = 12f;
-    //Jump heigth value of the player
-    public float jumpHeight = 3f;
 
     //Reference of the CharacterController
     private CharacterController controller;

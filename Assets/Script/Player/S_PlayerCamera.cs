@@ -16,7 +16,7 @@ public class S_PlayerCamera : MonoBehaviour
     void Start()
     {
         //Lock the cursor at the start of the game
-        LockCursor();
+        S_CameraFunction.LockCursor();
     }
 
     void Update()
@@ -41,16 +41,5 @@ public class S_PlayerCamera : MonoBehaviour
 
         //Rotate the player based on X axis of the mouse
         playerBody.Rotate(Vector3.up * mouseX);
-    }
-
-    //Make the cursor disapear, if the cursor is already lock just unlock it
-    public void LockCursor()
-    {
-        if (Cursor.lockState != CursorLockMode.Locked)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            return;
-        }
-        Cursor.lockState = CursorLockMode.None;
     }
 }
