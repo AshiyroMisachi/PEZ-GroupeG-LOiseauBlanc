@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interractibles : MonoBehaviour
+public abstract class Interractibles : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -14,5 +14,11 @@ public class Interractibles : MonoBehaviour
     void Update()
     {
         
+    }
+
+
+    protected virtual void Interraction()
+    {
+
     }
 }
