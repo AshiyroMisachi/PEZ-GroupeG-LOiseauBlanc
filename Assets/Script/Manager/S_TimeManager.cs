@@ -9,7 +9,7 @@ public class S_TimeManager : Manager
 {
     [Header("General")]
     [SerializeField]
-    //Sotck the time spend in the game since the start
+    //Stock the time spend in the game since the start, in second
     private float time;
     [SerializeField]
     //The maximum time in the game
