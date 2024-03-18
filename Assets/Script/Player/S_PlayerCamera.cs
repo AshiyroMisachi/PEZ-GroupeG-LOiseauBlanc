@@ -5,10 +5,12 @@ using UnityEngine;
 public class S_PlayerCamera : MonoBehaviour
 {
     //Rotation speed of the Camera
-    public float mouseSensivity = 100f;
+    [SerializeField]
+    private float mouseSensivity = 100f;
 
     //Reference of the Player Transform
-    public Transform playerBody;
+    [SerializeField]
+    private Transform playerBody;
 
     //Current xRotation of the Camera
     private float xRotation;

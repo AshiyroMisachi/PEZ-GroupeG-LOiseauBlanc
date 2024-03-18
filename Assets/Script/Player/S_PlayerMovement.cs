@@ -9,7 +9,8 @@ public class S_PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
     //speed value of the player
-    public float speed = 12f;
+    [SerializeField]
+    private float speed = 12f;
 
     //Reference of the CharacterController
     private CharacterController controller;
@@ -19,17 +20,21 @@ public class S_PlayerMovement : MonoBehaviour
     //Stock the velocity of the player
     private Vector3 velocity;
     //The Gravity who gonna be apply to the player 
-    public float gravity = -9.81f;
+    [SerializeField]
+    private float gravity = -9.81f;
 
 
     [Header("GroundCheck")]
     //All the variable needed for checking if the player is touching the ground
     //The transform of a empty gameobject
-    public Transform groundCheck;
+    [SerializeField]
+    private Transform groundCheck;
     //Radius of the checking sphere
-    public float groundDistance = 0.04f;
+    [SerializeField]
+    private float groundDistance = 0.04f;
     //Mask for the ground
-    public LayerMask groundMask;
+    [SerializeField]
+    private LayerMask groundMask;
     //Stock if the player touch the ground or not
     private bool isGrounded;
 
