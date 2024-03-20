@@ -17,7 +17,7 @@ public abstract class Interractibles : MonoBehaviour
     }
 
 
-    protected virtual void Interraction()
+    public virtual void Interraction()
     {
 
     }

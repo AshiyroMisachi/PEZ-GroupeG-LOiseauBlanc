@@ -32,6 +32,10 @@ public class S_PlayerInterract : MonoBehaviour
             {
                 DropObjectInHand();
             }
+            else if (Input.GetButtonDown("Fire1"))
+            {
+                objectInHand.Interraction();
+            }
         }
     }
 

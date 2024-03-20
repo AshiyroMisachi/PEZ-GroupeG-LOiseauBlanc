@@ -26,7 +26,7 @@ public class Box : Interractibles
     }
 
 
-    protected override void Interraction()
+    public override void Interraction()
     {
         base.Interraction();
         Debug.Log("caisse");
