@@ -46,6 +46,10 @@ public class S_PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (S_ManagerManager.GetManager<S_PlayerManager>().GetPlayerState() != PlayerState.Exploration)
+        {
+            return;
+        }
         //Check if the player touch the ground or not
         IsGrounded();
         //Chek if the player need to move each frame

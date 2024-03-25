@@ -23,6 +23,10 @@ public class S_PlayerCamera : MonoBehaviour
 
     void Update()
     {
+        if (S_ManagerManager.GetManager<S_PlayerManager>().GetPlayerState() != PlayerState.Exploration)
+        {
+            return;
+        }
         //Move the Camera each frame
         MoveCameraView();
     }
