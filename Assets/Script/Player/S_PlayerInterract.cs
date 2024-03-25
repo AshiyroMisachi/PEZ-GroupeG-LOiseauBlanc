@@ -102,6 +102,7 @@ public class S_PlayerInterract : MonoBehaviour
         //If left click pressed
         if (Input.GetButtonDown("Fire1") && Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out var info, interractRange))
         {
+            //If the raycast collide a Collectible Object
             if (info.transform.TryGetComponent<S_Interractible_Collectible>(out var collectible))
             {
                 //If no object in hand, set the item in hand
@@ -113,6 +114,13 @@ public class S_PlayerInterract : MonoBehaviour
                 //Else, drop the current object in hand, and set to the new
                 DropObjectInHand();
                 SetObjectInHand(collectible);
+            }
+
+            //If the raycast collide a Interractible
+            if (info.transform.TryGetComponent<Interractibles>(out var interactible))
+            {
+                interactible.Interraction();
+                return;
             }
         }
     }
