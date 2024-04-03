@@ -6,7 +6,6 @@ public class S_PlayerManager : Manager
 {
     private PlayerState playerState = PlayerState.Exploration;
 
-
     public PlayerState GetPlayerState() { return playerState; }
     public void SetPlayerState(PlayerState newPlayerState)
     {

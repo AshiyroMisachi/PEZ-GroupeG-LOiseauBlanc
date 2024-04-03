@@ -42,7 +42,7 @@ public class S_PlayerInterract : MonoBehaviour
             }
 
             //Use Object in Hand
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 objectInHand.Interraction();
                 return;
