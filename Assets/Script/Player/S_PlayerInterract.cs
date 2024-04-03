@@ -9,7 +9,7 @@ public class S_PlayerInterract : MonoBehaviour
     //Reference to the objectPosition to the player, is used for parenting
     private Transform objectPosition;
 
-    [SerializeField] 
+    [SerializeField]
     //Reference to the playerCamera, used for a Raycast
     private Transform playerCamera;
 
@@ -30,8 +30,14 @@ public class S_PlayerInterract : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CheckInterractible();
-        if (objectInHand != null && S_ManagerManager.GetManager<S_PlayerManager>().GetPlayerState() == PlayerState.Exploration)
+        var playerManager = S_ManagerManager.GetManager<S_PlayerManager>();
+
+        if (playerManager.GetPlayerState() == PlayerState.Exploration)
+        {
+            CheckInterractible();
+        }
+
+        if (objectInHand != null && playerManager.GetPlayerState() == PlayerState.Exploration)
         {
             //Drop the object in hand if pressed
             //if (Input.GetButtonDown("Cancel"))
@@ -50,7 +56,7 @@ public class S_PlayerInterract : MonoBehaviour
 
         }
 
-        if (S_ManagerManager.GetManager<S_PlayerManager>().GetPlayerState() == PlayerState.Inspect)
+        if (playerManager.GetPlayerState() == PlayerState.Inspect)
         {
             InspectionInput();
         }

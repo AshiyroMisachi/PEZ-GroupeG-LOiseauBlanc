@@ -138,6 +138,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1324159282880499078}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3837544042868544902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8424639818794082482}
+  m_Layer: 0
+  m_Name: ObjectPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8424639818794082482
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3837544042868544902}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4473210041434195883}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6847983101563250245
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,6 +202,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5242175622132067779}
+  - {fileID: 8424639818794082482}
   m_Father: {fileID: 1324159282880499078}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &4438030777717794947
@@ -257,6 +289,7 @@ GameObject:
   - component: {fileID: 1324159282880499078}
   - component: {fileID: 8907345660894528561}
   - component: {fileID: 7607281565298246158}
+  - component: {fileID: 711035169485227991}
   m_Layer: 0
   m_Name: PF_Player
   m_TagString: Untagged
@@ -327,6 +360,24 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 256
+--- !u!114 &711035169485227991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7401642347321755450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f5bf4c8f42a7f841a27f76a7e7db10f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPosition: {fileID: 8424639818794082482}
+  playerCamera: {fileID: 4473210041434195883}
+  interractRange: 500
+  objectInHand: {fileID: 0}
+  inHandPosition: {x: 0.43, y: -0.24, z: 0.67}
+  inInspectionPosition: {x: 0, y: 0, z: 1}
 --- !u!1001 &5654523796545582740
 PrefabInstance:
   m_ObjectHideFlags: 0

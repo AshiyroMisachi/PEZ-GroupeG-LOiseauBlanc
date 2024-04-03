@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class S_DialogueManager : Manager
 {
+    [Header("ReferenceUI")]
     [SerializeField]
     private GameObject dialogueBox;
     [SerializeField]
     private TextMeshProUGUI dialogueText;
 
+    [Header("Setup Var")]
     [SerializeField]
     private float timePerWord = 0.5f;
 
