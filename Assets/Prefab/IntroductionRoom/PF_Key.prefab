@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 73bcb05c87f9a914b8a3938123fdb00c, type: 2}
     - target: {fileID: 919132149155446097, guid: 8c58c0d25d103394da99aaa478ffe7f3, type: 3}
       propertyPath: m_Name
-      value: SM_Key
+      value: PF_Key
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -100,8 +100,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Constraints: 112
+  m_CollisionDetection: 2
 --- !u!114 &1795075902720072579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,4 +134,4 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.22158659, y: 0.02819229, z: 0.09611694}
-  m_Center: {x: -0.000000007450581, y: 0.0037308498, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}

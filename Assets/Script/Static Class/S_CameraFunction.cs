@@ -14,4 +14,10 @@ public static class S_CameraFunction
         }
         Cursor.lockState = CursorLockMode.None;
     }
+
+    public static void SwitchCamera(Camera newCamera, Camera currentCamera)
+    {
+        newCamera.enabled = true;
+        currentCamera.enabled = false;
+    }
 }
