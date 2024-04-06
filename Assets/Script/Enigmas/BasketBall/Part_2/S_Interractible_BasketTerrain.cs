@@ -25,6 +25,9 @@ public class S_Interractible_BasketTerrain : Interractibles
     [SerializeField]
     private bool isFinished = false;
 
+    [SerializeField]
+    private GameObject ballBox;
+
     private void Update()
     {
         if (!isActive)
@@ -40,6 +43,7 @@ public class S_Interractible_BasketTerrain : Interractibles
         if (VerifyPionPosition())
         {
             isFinished = true;
+            ballBox.SetActive(true);
             SetupPuzzle();
         }
 

@@ -21,7 +21,7 @@ public class S_PlayerInterract : MonoBehaviour
     //Reference to the current object in hand
     private S_Interractible_Collectible objectInHand;
     [SerializeField]
-    //Position where the objectInHand will be, it's a local position from the Player
+    //Position where the objectInHand will be, it's a local cardNumber from the Player
     private Vector3 inHandPosition;
 
     [SerializeField]
@@ -82,7 +82,7 @@ public class S_PlayerInterract : MonoBehaviour
         objectInHand = collectible;
         //Give a parent for following the player
         collectible.transform.parent = objectPosition.transform;
-        //Adjust the position, to be see on the camera
+        //Adjust the cardNumber, to be see on the camera
         objectPosition.transform.localPosition = inHandPosition;
         collectible.transform.localPosition = Vector3.zero;
         //Unable gravity of the object
