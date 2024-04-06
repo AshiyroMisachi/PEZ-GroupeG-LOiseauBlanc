@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class S_PlayerManager : Manager
 {
+    [SerializeField]
+    private GameObject player;
     private PlayerState playerState = PlayerState.Exploration;
+
+    public GameObject GetPlayer () { return player; }
 
     public PlayerState GetPlayerState() { return playerState; }
     public void SetPlayerState(PlayerState newPlayerState)

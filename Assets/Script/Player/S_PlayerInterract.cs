@@ -92,13 +92,19 @@ public class S_PlayerInterract : MonoBehaviour
     }
 
     //Drop to the ground the current object in hand
-    private void DropObjectInHand()
+    public  void DropObjectInHand()
     {
         //The object is not a child of the player
         objectInHand.transform.parent = null;
         //Able his gravity to fell to the ground
         objectInHand.gameObject.GetComponent<Rigidbody>().isKinematic = false;
         //Set the object in hand to null
+        objectInHand = null;
+    }
+
+    public void DestroyObjectInHand()
+    {
+        Destroy(objectInHand.gameObject);
         objectInHand = null;
     }
 
