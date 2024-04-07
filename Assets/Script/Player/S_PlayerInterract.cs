@@ -91,7 +91,7 @@ public class S_PlayerInterract : MonoBehaviour
         //Unable gravity of the object
         collectible.gameObject.GetComponent<Rigidbody>().isKinematic = true;
         //Set is rotation to zero
-        collectible.transform.eulerAngles = Vector3.zero;
+        collectible.transform.localEulerAngles = Vector3.zero;
     }
 
     //Drop to the ground the current object in hand
@@ -129,6 +129,7 @@ public class S_PlayerInterract : MonoBehaviour
                 //Else, drop the current object in hand, and set to the new
                 DropObjectInHand();
                 SetObjectInHand(collectible);
+                return;
             }
 
             //If the raycast collide a Interractible
