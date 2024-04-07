@@ -27,6 +27,9 @@ public class S_PlayerInterract : MonoBehaviour
     [SerializeField]
     private Vector3 inInspectionPosition;
 
+    [SerializeField]
+    private float inspectSpeed, inspectZoomSpeed;
+
     // Update is called once per frame
     void Update()
     {
@@ -150,18 +153,20 @@ public class S_PlayerInterract : MonoBehaviour
         //Leave Inspect Mode
         playerManager.SetPlayerState(PlayerState.Exploration);
         objectPosition.transform.localPosition = inHandPosition;
-        objectPosition.transform.eulerAngles = Vector3.zero;
+        objectPosition.transform.localEulerAngles = Vector3.zero;
+        playerCamera.GetComponent<Camera>().fieldOfView = 60;
     }
 
     private void InspectionInput()
     {
         //Object Rotation 
         //Stock Axis value
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        //Put * Time.deltaTime bug all the rotation and zoom here
+        float x = Input.GetAxis("Horizontal") * inspectSpeed;
+        float z = Input.GetAxis("Vertical") * inspectSpeed;
+        float zoom = Input.GetAxis("Mouse ScrollWheel") * inspectZoomSpeed;
 
-        objectPosition.transform.localEulerAngles += Vector3.forward * x;
-        objectPosition.transform.localEulerAngles += Vector3.right * z;
-
+        objectPosition.transform.Rotate(x, 0, z );
+        playerCamera.GetComponent<Camera>().fieldOfView = Mathf.Clamp(playerCamera.GetComponent<Camera>().fieldOfView + zoom, 30, 60);
     }
 }
