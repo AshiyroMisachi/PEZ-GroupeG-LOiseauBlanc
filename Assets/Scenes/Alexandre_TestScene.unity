@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 425833}
   - component: {fileID: 425832}
+  - component: {fileID: 425834}
   m_Layer: 0
   m_Name: AlonePuppet
   m_TagString: Untagged
@@ -180,6 +181,20 @@ Transform:
   - {fileID: 2123026897}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &425834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 606df7a84d746144ebc3d7dfc9997436, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puppet: {fileID: 783932750}
+  savedPuppet: {fileID: 2118530041}
 --- !u!1 &215086494
 GameObject:
   m_ObjectHideFlags: 0
@@ -959,6 +974,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4907620452017844030, guid: bbf840ed4a56f394db54ec733e1c943a, type: 3}
+--- !u!1 &783932750 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4375066523671684140, guid: 8f49c4913a4cdbf4894f54e522034de4, type: 3}
+  m_PrefabInstance: {fileID: 2858735540316301274}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &811712812
 GameObject:
   m_ObjectHideFlags: 0
@@ -3093,6 +3113,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27b407b949d266a4c937bb8989976142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2118530041 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 81466f5a904096e4fa9fb10526cfd286, type: 3}
+  m_PrefabInstance: {fileID: 1917944939}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2123026896
 GameObject:
   m_ObjectHideFlags: 0
