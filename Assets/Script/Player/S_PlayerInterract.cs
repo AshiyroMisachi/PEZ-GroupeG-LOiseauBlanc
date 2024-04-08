@@ -167,7 +167,7 @@ public class S_PlayerInterract : MonoBehaviour
         float z = Input.GetAxis("Vertical") * inspectSpeed;
         float zoom = Input.GetAxis("Mouse ScrollWheel") * inspectZoomSpeed;
 
-        objectPosition.transform.Rotate(x, 0, z );
+        objectPosition.transform.Rotate(x, 0, z , Space.Self);
         playerCamera.GetComponent<Camera>().fieldOfView = Mathf.Clamp(playerCamera.GetComponent<Camera>().fieldOfView + zoom, 30, 60);
     }
 }
