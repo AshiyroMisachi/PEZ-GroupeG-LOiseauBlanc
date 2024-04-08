@@ -195,6 +195,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puppet: {fileID: 783932750}
   savedPuppet: {fileID: 2118530041}
+  firstInterractDialogue: {fileID: 11400000, guid: b46c88f320ebac7459b651f7ca575d8b, type: 2}
+  finishDialogue: {fileID: 11400000, guid: 92ee70343a36bf2499d2cbcd4bf64894, type: 2}
 --- !u!1 &215086494
 GameObject:
   m_ObjectHideFlags: 0
@@ -1970,7 +1972,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 2033452569}
   dialogueText: {fileID: 1985036767}
-  timePerWord: 0.2
+  timePerWord: 0.1
 --- !u!1 &1355896711
 GameObject:
   m_ObjectHideFlags: 0
@@ -2925,7 +2927,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0.0000038146973, y: 128}
-  m_SizeDelta: {x: 1052.63, y: 185.3}
+  m_SizeDelta: {x: 1052.63, y: 129.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2033452571
 MonoBehaviour:
@@ -3283,6 +3285,14 @@ PrefabInstance:
       propertyPath: pionBox
       value: 
       objectReference: {fileID: 1468747841}
+    - target: {fileID: 8388848851499915426, guid: 3933da810e993994f8a69dda7f134c4e, type: 3}
+      propertyPath: finishDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 2d1f2c253ee85bf4ba746564929e4e98, type: 2}
+    - target: {fileID: 8388848851499915426, guid: 3933da810e993994f8a69dda7f134c4e, type: 3}
+      propertyPath: firstInterractDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 341bded1ccc42284c91ffba81e5482b0, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3637,6 +3647,14 @@ PrefabInstance:
       propertyPath: pionBox
       value: 
       objectReference: {fileID: 1468747841}
+    - target: {fileID: 8622590324457206211, guid: 4238eec12900bac44bc34d7bf3bb4a1a, type: 3}
+      propertyPath: finishDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 3576bd543d7dcab4495e38c4d7e45dbf, type: 2}
+    - target: {fileID: 8622590324457206211, guid: 4238eec12900bac44bc34d7bf3bb4a1a, type: 3}
+      propertyPath: firstInterractDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 2c61d5b1b1fd1b74ca43a65d7b4ebc8a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

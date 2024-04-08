@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class S_Interractible_CardCollection : Interractibles
 {
-    private bool isActive, isFinished;
+    private bool isActive, isFinished, firstInterract;
+    [SerializeField]
+    private SO_Dialogue firstInterractDialogue, finishDialogue;
 
     [SerializeField]
     private Camera puzzleCamera;
@@ -23,6 +25,12 @@ public class S_Interractible_CardCollection : Interractibles
 
     public override void Interraction()
     {
+        if (!firstInterract)
+        {
+            firstInterract = true;
+            StartCoroutine(S_ManagerManager.GetManager<S_DialogueManager>().SendDialogue(firstInterractDialogue));
+        }
+
         SetupPuzzle();
     }
 
@@ -41,8 +49,8 @@ public class S_Interractible_CardCollection : Interractibles
         if (VerifyCardPositionOrder() && !isFinished)
         {
             isFinished = true;
+            StartCoroutine(S_ManagerManager.GetManager<S_DialogueManager>().SendDialogue(finishDialogue));
             pionBox.SetActive(true);
-            SetupPuzzle();
         }
     }
 

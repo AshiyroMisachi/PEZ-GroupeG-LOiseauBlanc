@@ -22,8 +22,9 @@ public class S_Interractible_BasketTerrain : Interractibles
     [SerializeField]
     private Vector3 currentPionPosition, currentPionRotation;
 
+    private bool isFinished = false, firstInterract = false;
     [SerializeField]
-    private bool isFinished = false;
+    private SO_Dialogue firstInterractDialogue, finishDialogue;
 
     [SerializeField]
     private GameObject ballBox;
@@ -43,6 +44,7 @@ public class S_Interractible_BasketTerrain : Interractibles
         if (VerifyPionPosition())
         {
             isFinished = true;
+            StartCoroutine(S_ManagerManager.GetManager<S_DialogueManager>().SendDialogue(finishDialogue));
             ballBox.SetActive(true);
             SetupPuzzle();
         }
@@ -56,6 +58,11 @@ public class S_Interractible_BasketTerrain : Interractibles
     public override void Interraction()
     {
         var playerInterract = S_ManagerManager.GetManager<S_PlayerManager>().GetPlayer().GetComponent<S_PlayerInterract>();
+        if (!firstInterract)
+        {
+            firstInterract = true;
+            StartCoroutine(S_ManagerManager.GetManager<S_DialogueManager>().SendDialogue(firstInterractDialogue));
+        }
 
         if (playerInterract.GetObjectInHand() != null && pionBox != null && playerInterract.GetObjectInHand().gameObject == pionBox)
         {
