@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class S_Interractible_BasketBallGame : Interractibles
 {
-    private bool isActive, isFinished;
+    private bool isActive, isFinished, firstInterract;
 
     [SerializeField]
     private Camera puzzleCamera;
@@ -13,7 +13,7 @@ public class S_Interractible_BasketBallGame : Interractibles
     private GameObject ballBox, ballBoxOpen;
 
     [SerializeField]
-    private float launchForce, forceAugmentation;
+    private float actualForce, forceAugmentation, launchForce;
 
     [SerializeField]
     private GameObject launchDirection;
@@ -29,11 +29,25 @@ public class S_Interractible_BasketBallGame : Interractibles
     [SerializeField]
     private Vector3 ballSpawnPosition;
 
+    [SerializeField]
+    private int score, finishScore;
+
+    [SerializeField]
+    private SO_Dialogue firstInterractDialogue, finishDialogue;
+
     private void Update()
     {
         if (!isActive)
         {
             return;
+        }
+
+        if (!isFinished && score > finishScore)
+        {
+            isFinished = true;
+            StartCoroutine(S_ManagerManager.GetManager<S_DialogueManager>().SendDialogue(finishDialogue));
+
+            //Unlock Thing for train
         }
 
         LaunchBall();
@@ -44,11 +58,11 @@ public class S_Interractible_BasketBallGame : Interractibles
     {
         var playerInterract = S_ManagerManager.GetManager<S_PlayerManager>().GetPlayer().GetComponent<S_PlayerInterract>();
 
-        //if (!firstInterract)
-        //{
-        //    firstInterract = true;
-        //    StartCoroutine(S_ManagerManager.GetManager<S_DialogueManager>().SendDialogue(firstInterractDialogue));
-        //}
+        if (!firstInterract)
+        {
+            firstInterract = true;
+            StartCoroutine(S_ManagerManager.GetManager<S_DialogueManager>().SendDialogue(firstInterractDialogue));
+        }
 
         if (playerInterract.GetObjectInHand() != null && ballBox != null && playerInterract.GetObjectInHand().gameObject == ballBox)
         {
@@ -81,23 +95,23 @@ public class S_Interractible_BasketBallGame : Interractibles
     {
         if (Input.GetButton("Fire1"))
         {
-            launchForce += forceAugmentation * Time.deltaTime;
-            launchForce = Mathf.Clamp01(launchForce);
-            launchingPad.transform.localEulerAngles = Vector3.Lerp(lauchingPadBaseRotation, launchingPadChargedRotation, launchForce);
+            actualForce += forceAugmentation * Time.deltaTime;
+            actualForce = Mathf.Clamp01(actualForce);
+            launchingPad.transform.localEulerAngles = Vector3.Lerp(lauchingPadBaseRotation, launchingPadChargedRotation, actualForce);
         }
-        
-        if (Input.GetButtonUp("Fire1") && launchForce > 0)
-        {
-            launchingPad.transform.localEulerAngles = lauchingPadBaseRotation;
 
-            //YEEEEET
+        if (Input.GetButtonUp("Fire1") && actualForce > 0 && currentBall != null)
+        {
+            //launchingPad.transform.localEulerAngles = lauchingPadBaseRotation;
+
+            currentBall.GetComponent<S_BasketBallGame_Ball>().StartLaunch();
             currentBall.transform.parent = null;
             currentBall.GetComponent<Rigidbody>().isKinematic = false;
             Vector3 direction = Vector3.Normalize(launchDirection.transform.position - currentBall.transform.position);
-            currentBall.GetComponent<Rigidbody>().AddForce(direction * launchForce);
+            currentBall.GetComponent<Rigidbody>().AddForce(direction * actualForce * launchForce);
 
 
-            launchForce = 0;
+            actualForce = 0;
         }
     }
 
@@ -108,6 +122,18 @@ public class S_Interractible_BasketBallGame : Interractibles
             currentBall = Instantiate(prefabBall, launchingPad.transform);
             currentBall.transform.localPosition = ballSpawnPosition;
             currentBall.GetComponent<Rigidbody>().isKinematic = true;
+            currentBall.GetComponent<S_BasketBallGame_Ball>().SetBasketBallGame(this);
         }
+    }
+
+    public void DestroyCurrentBall()
+    {
+        Destroy(currentBall.gameObject);
+        currentBall = null;
+    }
+
+    public void IncrementScore(int amount)
+    {
+        score += amount;
     }
 }

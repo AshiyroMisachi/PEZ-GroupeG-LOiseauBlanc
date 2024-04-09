@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pirate
   - gun
+  - BasketBallGame_Basket
   layers:
   - Default
   - TransparentFX
