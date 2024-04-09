@@ -2699,7 +2699,7 @@ MonoBehaviour:
   currentBall: {fileID: 0}
   ballSpawnPosition: {x: 0, y: 0.0288, z: 0.0615}
   score: 0
-  finishScore: 0
+  finishScore: 5
   firstInterractDialogue: {fileID: 11400000, guid: 1412257b5e6be0344bb442ebee89ec31, type: 2}
   finishDialogue: {fileID: 11400000, guid: c486e5a99e7416f4099920e456b8a5a8, type: 2}
 --- !u!64 &1448192114
