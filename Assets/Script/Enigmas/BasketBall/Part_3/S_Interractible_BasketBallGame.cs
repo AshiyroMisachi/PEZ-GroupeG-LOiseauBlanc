@@ -42,6 +42,11 @@ public class S_Interractible_BasketBallGame : Interractibles
             return;
         }
 
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            SetupPuzzle();
+        }
+
         if (!isFinished && score > finishScore)
         {
             isFinished = true;

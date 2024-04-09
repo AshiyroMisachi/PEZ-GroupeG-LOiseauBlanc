@@ -20,6 +20,11 @@ public class S_Interractible_Dinette : Interractibles
     {
         if (!isActive) return;   
 
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            SetupPuzzle();
+        }
+
         if (VerifyCorrectButton())
         {
             isFisished = true;

@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: SO_BasketBallGame_FirstInterract
   m_EditorClassIdentifier: 
   dialogue:
-  - "Jusque l\xE0 tout \xE9tait tr\xE8s simple"
-  - "Il va falloir faire preuve de pr\xE9cision maintenant !"
+  - "C'est un de mes jouets pr\xE9f\xE9r\xE9s, un petit lanceur de balle"
   - "Si tu arrive \xE0 mettre 5 paniers je consid\xE9rai que tu as gagn\xE9 ce petit
     jeu"
