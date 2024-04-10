@@ -1383,13 +1383,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 979856883}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.533, z: -1.961}
+  m_LocalRotation: {x: 0.15161332, y: -0, z: -0, w: 0.9884399}
+  m_LocalPosition: {x: 0, y: 2.363, z: -2.319}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1792742990}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 17.441, y: 0, z: 0}
 --- !u!20 &979856885
 Camera:
   m_ObjectHideFlags: 0
@@ -2361,6 +2361,8 @@ MonoBehaviour:
   heartItem: {fileID: 1855475246}
   heartObject: {fileID: 1034529279}
   puzzleCamera: {fileID: 979856885}
+  inspectSpeed: 1
+  inspectZoomSpeed: 0
 --- !u!1 &1855475246 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: de3ecfb95a1601c49be05f1f26ffe41e, type: 3}
