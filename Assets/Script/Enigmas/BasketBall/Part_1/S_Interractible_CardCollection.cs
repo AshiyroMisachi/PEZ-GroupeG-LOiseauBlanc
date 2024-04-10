@@ -89,7 +89,7 @@ public class S_Interractible_CardCollection : Interractibles
         }
 
         //Reset Card high
-        currentCard.transform.localPosition = new Vector3(currentCard.transform.localPosition.x, 0.02f, currentCard.transform.localPosition.z);
+        currentCard.transform.localPosition = new Vector3(currentCard.transform.localPosition.x, currentCardHigh, currentCard.transform.localPosition.z);
         Vector3 currentCardPosition = currentCard.transform.localPosition;
         int currentCardPositionOrder = currentCard.GetPositionOrder();
 

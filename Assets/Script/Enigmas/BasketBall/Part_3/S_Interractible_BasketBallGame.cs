@@ -114,17 +114,21 @@ public class S_Interractible_BasketBallGame : Interractibles
             launchingPad.transform.localEulerAngles = Vector3.Lerp(lauchingPadBaseRotation, launchingPadChargedRotation, actualForce);
         }
 
-        if (Input.GetButtonUp("Fire1") && actualForce > 0 && currentBall != null)
+        if (Input.GetButtonUp("Fire1") && actualForce > 0)
         {
-            //launchingPad.transform.localEulerAngles = lauchingPadBaseRotation;
+            launchingPad.transform.localEulerAngles = lauchingPadBaseRotation;
 
-            currentBall.GetComponent<S_BasketBallGame_Ball>().StartLaunch();
-            currentBall.transform.parent = null;
-            currentBall.GetComponent<Rigidbody>().isKinematic = false;
-            Vector3 direction = Vector3.Normalize(launchDirection.transform.position - currentBall.transform.position);
-            currentBall.GetComponent<Rigidbody>().AddForce(direction * actualForce * launchForce);
+            if (currentBall != null)
+            {
+                currentBall.GetComponent<S_BasketBallGame_Ball>().StartLaunch();
+                currentBall.transform.parent = null;
+                currentBall.GetComponent<Rigidbody>().isKinematic = false;
+                Vector3 direction = Vector3.Normalize(launchDirection.transform.position - currentBall.transform.position);
+                currentBall.GetComponent<Rigidbody>().AddForce(direction * actualForce * launchForce);
 
-            ballThrowed = true;
+                ballThrowed = true;
+            }
+
             actualForce = 0;
         }
     }
