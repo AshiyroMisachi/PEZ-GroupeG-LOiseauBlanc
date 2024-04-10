@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a406462778a13d54ca7ebb3b1427d992
+guid: 222a8a6abb77e884290711982c1b5deb
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,13 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Default_Material
-    second: {fileID: 2100000, guid: e958b913fe3d6864990d2bae475ae147, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: defaultPolygonShader
-    second: {fileID: 2100000, guid: e958b913fe3d6864990d2bae475ae147, type: 2}
+      name: standardSurface1
+    second: {fileID: 2100000, guid: 747924e46ce4b80429bc035de2a573f6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

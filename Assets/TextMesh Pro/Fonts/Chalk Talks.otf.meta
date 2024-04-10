@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: d1161d87a7a5f3d4cb291eb26693dcbf
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Chalk Talks
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: e06e478b612495b49adbeb17d3f84813, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 1
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

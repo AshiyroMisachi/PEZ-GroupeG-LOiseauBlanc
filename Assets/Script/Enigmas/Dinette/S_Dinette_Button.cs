@@ -9,6 +9,8 @@ public class S_Dinette_Button : MonoBehaviour
     [SerializeField]
     private float buttonRotation;
 
+    [SerializeField]
+    private S_Interractible_Dinette dinette;
     public int GetActualNumbers()
     {
         return actualNumbers;
@@ -16,6 +18,11 @@ public class S_Dinette_Button : MonoBehaviour
 
     public void OnMouseDown()
     {
+        if (!dinette.GetIsActive())
+        {
+            return;
+        }
+
         actualNumbers = actualNumbers.LoopClamp(actualNumbers + 1, 0, 12);
         transform.Rotate(-buttonRotation, 0, 0);
     }

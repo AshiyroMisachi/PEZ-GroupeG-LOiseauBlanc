@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class S_Interractible_BasketBallGame : Interractibles
 {
-    private bool isActive, isFinished, firstInterract;
+    private bool isActive, isFinished, firstInterract, ballThrowed;
 
     [SerializeField]
     private Camera puzzleCamera;
@@ -34,6 +35,9 @@ public class S_Interractible_BasketBallGame : Interractibles
 
     [SerializeField]
     private SO_Dialogue firstInterractDialogue, finishDialogue;
+
+    [SerializeField]
+    private TextMeshProUGUI scoreText;
 
     private void Update()
     {
@@ -98,6 +102,11 @@ public class S_Interractible_BasketBallGame : Interractibles
 
     private void LaunchBall()
     {
+        if (ballThrowed)
+        {
+            return;
+        }
+
         if (Input.GetButton("Fire1"))
         {
             actualForce += forceAugmentation * Time.deltaTime;
@@ -115,7 +124,7 @@ public class S_Interractible_BasketBallGame : Interractibles
             Vector3 direction = Vector3.Normalize(launchDirection.transform.position - currentBall.transform.position);
             currentBall.GetComponent<Rigidbody>().AddForce(direction * actualForce * launchForce);
 
-
+            ballThrowed = true;
             actualForce = 0;
         }
     }
@@ -134,11 +143,13 @@ public class S_Interractible_BasketBallGame : Interractibles
     public void DestroyCurrentBall()
     {
         Destroy(currentBall.gameObject);
+        ballThrowed = false;
         currentBall = null;
     }
 
     public void IncrementScore(int amount)
     {
         score += amount;
+        scoreText.text = score.ToString();
     }
 }

@@ -33,6 +33,11 @@ public class S_Interractible_Dinette : Interractibles
         }
     }
 
+    public bool GetIsActive()
+    {
+        return isActive;
+    }
+
     public override void Interraction()
     {
         if (isFisished)
