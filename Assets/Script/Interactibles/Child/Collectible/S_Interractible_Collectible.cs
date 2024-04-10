@@ -10,7 +10,7 @@ public abstract class S_Interractible_Collectible : Interractibles
         Debug.Log("Default Interraction");
     }
 
-    public void InterractionInspection()
+    public virtual void InterractionInspection()
     {
         Debug.Log("Default Interraction in Inspection");
     }
