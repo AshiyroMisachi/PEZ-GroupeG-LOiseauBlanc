@@ -40,7 +40,10 @@ public class S_TimeManager : Manager
     {
         time = Time.time;
 
-        directionalLight.eulerAngles = Vector3.Lerp(startRotation, endRotation, time / maxTime);
+        if (directionalLight != null )
+        {
+            directionalLight.eulerAngles = Vector3.Lerp(startRotation, endRotation, time / maxTime);
+        }
 
         if (time > maxTime)
         {
