@@ -84,6 +84,11 @@ public class S_PlayerInterract : MonoBehaviour
         return objectInHand;
     }
 
+    public Transform GetObjectPosition()
+    {
+        return objectPosition;
+    }
+
     //Set the current Object in Hand
     public void SetObjectInHand(S_Interractible_Collectible collectible)
     {
