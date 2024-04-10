@@ -62,6 +62,12 @@ public class S_PlayerInterract : MonoBehaviour
         if (playerManager.GetPlayerState() == PlayerState.Inspect)
         {
             InspectionInput();
+            //Use Object in Hand
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                objectInHand.InterractionInspection();
+                return;
+            }
         }
 
         //SetupInspect Object in Hand
@@ -70,7 +76,6 @@ public class S_PlayerInterract : MonoBehaviour
             SetupInspect();
             return;
         }
-
     }
 
     //Return the current Object in hand

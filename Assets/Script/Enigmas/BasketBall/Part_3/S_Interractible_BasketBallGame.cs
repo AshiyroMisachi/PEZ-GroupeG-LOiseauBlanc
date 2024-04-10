@@ -47,7 +47,7 @@ public class S_Interractible_BasketBallGame : Interractibles
             SetupPuzzle();
         }
 
-        if (!isFinished && score > finishScore)
+        if (!isFinished && score >= finishScore)
         {
             isFinished = true;
             StartCoroutine(S_ManagerManager.GetManager<S_DialogueManager>().SendDialogue(finishDialogue));
