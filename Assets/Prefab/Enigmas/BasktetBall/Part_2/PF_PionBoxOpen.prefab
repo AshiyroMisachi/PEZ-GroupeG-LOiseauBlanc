@@ -131,7 +131,6 @@ GameObject:
   - component: {fileID: 4003081349597352378}
   - component: {fileID: 6068528595301732913}
   - component: {fileID: 4142357882091579935}
-  - component: {fileID: 2531933889466635037}
   m_Layer: 0
   m_Name: PF_PionBoxOpen
   m_TagString: Untagged
@@ -214,27 +213,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2531933889466635037
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1378047716902020954}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.3352059, y: 0.14586094, z: 0.14586094}
-  m_Center: {x: 0, y: 0.07293047, z: -0.0000000037252903}
 --- !u!1 &3188104191246466343
 GameObject:
   m_ObjectHideFlags: 0
