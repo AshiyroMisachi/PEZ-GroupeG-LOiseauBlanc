@@ -21,7 +21,7 @@ public class S_ICollectible_Heart : S_Interractible_Collectible
     public override void InterractionInspection()
     {
 
-        if ()
+        if (true)
         {
             Debug.Log("bonne position !");
             //set pos jeur
