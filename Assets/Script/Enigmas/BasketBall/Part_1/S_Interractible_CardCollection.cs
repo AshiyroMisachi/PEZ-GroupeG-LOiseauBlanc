@@ -84,7 +84,7 @@ public class S_Interractible_CardCollection : Interractibles
         if (currentCard == null)
         {
             currentCard = card;
-            currentCard.transform.localPosition = new Vector3(currentCard.transform.localPosition.x, currentCardHigh, currentCard.transform.localPosition.z);
+            currentCard.transform.localPosition = new Vector3(currentCard.transform.localPosition.x, 0.05f, currentCard.transform.localPosition.z);
             return;
         }
 
