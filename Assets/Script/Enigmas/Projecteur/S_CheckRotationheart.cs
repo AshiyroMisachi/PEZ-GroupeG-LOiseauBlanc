@@ -15,7 +15,6 @@ public class S_CheckRotationheart : Interractibles
     [SerializeField]
     private float inspectSpeed = 1, inspectZoomSpeed = 0;
 
-    private Vector3 minX = Vector3.zero;
 
 
 
@@ -47,56 +46,26 @@ public class S_CheckRotationheart : Interractibles
 
             heartObject.transform.Rotate(x, 0, z, Space.Self);
 
+            //y a 90 ou 270
+            //z  0 ou 180 = x
 
-            
 
-            if (heartObject.transform.localEulerAngles.x <= 280 && heartObject.transform.localEulerAngles.x >= 260)
+            if ((heartObject.transform.localEulerAngles.y <= 280 && heartObject.transform.localEulerAngles.y >= 260) || (heartObject.transform.localEulerAngles.y <= 100 && heartObject.transform.localEulerAngles.y >= 80))
             {
-                Debug.Log("x");
-
-                if ((heartObject.transform.localEulerAngles.y >= -10 && heartObject.transform.localEulerAngles.y <= 20) && (heartObject.transform.localEulerAngles.z >= 80 && heartObject.transform.localEulerAngles.z <= 100))
+                if ((heartObject.transform.localEulerAngles.x >= -10 && heartObject.transform.localEulerAngles.x <= 20) && (heartObject.transform.localEulerAngles.z >= -10 && heartObject.transform.localEulerAngles.z <= 10))
                 {
                     Debug.Log("y");
                 }
 
-
-                if ((heartObject.transform.localEulerAngles.y >= 80 && heartObject.transform.localEulerAngles.y <= 100) && (heartObject.transform.localEulerAngles.z >= 170 && heartObject.transform.localEulerAngles.z <= 190))
+                if ((heartObject.transform.localEulerAngles.x >= 170 && heartObject.transform.localEulerAngles.x <= 190) && (heartObject.transform.localEulerAngles.z >= 170 && heartObject.transform.localEulerAngles.z <= 190))
                 {
                     Debug.Log("y");
                 }
-
-
-                if ((heartObject.transform.localEulerAngles.y >= 170 && heartObject.transform.localEulerAngles.y <= 190) && (heartObject.transform.localEulerAngles.z >= 250 && heartObject.transform.localEulerAngles.z <= 270))
-                {
-                    Debug.Log("y");
-                }
-
-
-                //
-
-                if ((heartObject.transform.localEulerAngles.y >= 80 && heartObject.transform.localEulerAngles.y <= 100) && (heartObject.transform.localEulerAngles.z >= -10 && heartObject.transform.localEulerAngles.z <= 20))
-                {
-                    Debug.Log("y");
-                }
-
-
-                if ((heartObject.transform.localEulerAngles.y >= 170 && heartObject.transform.localEulerAngles.y <= 190) && (heartObject.transform.localEulerAngles.z >= 80 && heartObject.transform.localEulerAngles.z <= 100))
-                {
-                    Debug.Log("y");
-                }
-
-
-                if ((heartObject.transform.localEulerAngles.y >= 250 && heartObject.transform.localEulerAngles.y <= 270) && (heartObject.transform.localEulerAngles.z >= 170 && heartObject.transform.localEulerAngles.z <= 190))
-                {
-                    Debug.Log("y");
-                }
-
 
 
 
             }
 
-            //code test bonne rota
 
 
         }
