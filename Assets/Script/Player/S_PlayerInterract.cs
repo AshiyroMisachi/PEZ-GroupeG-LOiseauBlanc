@@ -44,7 +44,7 @@ public class S_PlayerInterract : MonoBehaviour
         {
             //Drop the object in hand if pressed
             //if (Input.GetButtonDown("Cancel"))
-            if (Input.GetKeyDown(KeyCode.P))
+            if (Input.GetKeyDown(KeyCode.P) && objectInHand != null)
             {
                 DropObjectInHand();
                 return;
