@@ -17,6 +17,7 @@ public class S_CheckRotationheart : Interractibles
 
 
 
+
     public void Update()
     {
 
@@ -36,17 +37,34 @@ public class S_CheckRotationheart : Interractibles
 
         if (heartObject.activeInHierarchy)
         {
-            Debug.Log("test");
 
-            //ajout rota
 
-            //code test bonne rota
 
             float x = Input.GetAxis("Horizontal") * inspectSpeed;
             float z = Input.GetAxis("Vertical") * inspectSpeed;
             float zoom = Input.GetAxis("Mouse ScrollWheel") * inspectZoomSpeed;
 
             heartObject.transform.Rotate(x, 0, z, Space.Self);
+
+            //y a 90 ou 270
+            //z  0 ou 180 = x
+
+
+            if ((heartObject.transform.localEulerAngles.y <= 280 && heartObject.transform.localEulerAngles.y >= 260) || (heartObject.transform.localEulerAngles.y <= 100 && heartObject.transform.localEulerAngles.y >= 80))
+            {
+                if ((heartObject.transform.localEulerAngles.x >= -10 && heartObject.transform.localEulerAngles.x <= 20) && (heartObject.transform.localEulerAngles.z >= -10 && heartObject.transform.localEulerAngles.z <= 10))
+                {
+                    Debug.Log("y");
+                }
+
+                if ((heartObject.transform.localEulerAngles.x >= 170 && heartObject.transform.localEulerAngles.x <= 190) && (heartObject.transform.localEulerAngles.z >= 170 && heartObject.transform.localEulerAngles.z <= 190))
+                {
+                    Debug.Log("y");
+                }
+
+
+
+            }
 
 
 

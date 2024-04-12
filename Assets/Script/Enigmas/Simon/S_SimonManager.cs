@@ -22,7 +22,6 @@ public class S_SimonManager : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(ActiveSimon());
         StartSetup();
     }
     void Update()
@@ -51,14 +50,13 @@ public class S_SimonManager : MonoBehaviour
         }
     }
 
-    public IEnumerator ActiveSimon()
+    public void ActiveSimon()
     {
         activated = true;
         for (int j = 0; j < buzzers.Length; j++)
         {
             StartCoroutine(buzzers[j].ActiveLight());
         }
-        yield return new WaitForSeconds(1f);
     }
 
     private void StartSetup()
