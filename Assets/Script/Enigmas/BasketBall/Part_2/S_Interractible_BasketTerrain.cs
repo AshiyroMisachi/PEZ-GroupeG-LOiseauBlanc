@@ -29,6 +29,9 @@ public class S_Interractible_BasketTerrain : Interractibles
     [SerializeField]
     private GameObject ballBox;
 
+    [SerializeField]
+    private Animator drawerAnimator;
+
     private void Update()
     {
         if (!isActive)
@@ -45,7 +48,7 @@ public class S_Interractible_BasketTerrain : Interractibles
         {
             isFinished = true;
             S_ManagerManager.GetManager<S_DialogueManager>().SendDialogue(finishDialogue);
-            ballBox.SetActive(true);
+            drawerAnimator.SetTrigger("Open");
             SetupPuzzle();
         }
 
