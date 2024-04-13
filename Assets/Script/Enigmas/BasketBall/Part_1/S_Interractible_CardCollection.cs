@@ -28,7 +28,7 @@ public class S_Interractible_CardCollection : Interractibles
         if (!firstInterract)
         {
             firstInterract = true;
-            StartCoroutine(S_ManagerManager.GetManager<S_DialogueManager>().SendDialogue(firstInterractDialogue));
+            S_ManagerManager.GetManager<S_DialogueManager>().SendDialogue(firstInterractDialogue);
         }
 
         SetupPuzzle();
@@ -49,7 +49,7 @@ public class S_Interractible_CardCollection : Interractibles
         if (VerifyCardPositionOrder() && !isFinished)
         {
             isFinished = true;
-            StartCoroutine(S_ManagerManager.GetManager<S_DialogueManager>().SendDialogue(finishDialogue));
+            S_ManagerManager.GetManager<S_DialogueManager>().SendDialogue(finishDialogue);
             pionBox.SetActive(true);
         }
     }

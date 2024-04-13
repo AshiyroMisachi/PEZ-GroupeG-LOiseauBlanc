@@ -44,7 +44,7 @@ public class S_Interractible_BasketTerrain : Interractibles
         if (VerifyPionPosition())
         {
             isFinished = true;
-            StartCoroutine(S_ManagerManager.GetManager<S_DialogueManager>().SendDialogue(finishDialogue));
+            S_ManagerManager.GetManager<S_DialogueManager>().SendDialogue(finishDialogue);
             ballBox.SetActive(true);
             SetupPuzzle();
         }
@@ -61,7 +61,7 @@ public class S_Interractible_BasketTerrain : Interractibles
         if (!firstInterract)
         {
             firstInterract = true;
-            StartCoroutine(S_ManagerManager.GetManager<S_DialogueManager>().SendDialogue(firstInterractDialogue));
+            S_ManagerManager.GetManager<S_DialogueManager>().SendDialogue(firstInterractDialogue);
         }
 
         if (playerInterract.GetObjectInHand() != null && pionBox != null && playerInterract.GetObjectInHand().gameObject == pionBox)

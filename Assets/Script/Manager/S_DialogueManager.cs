@@ -15,15 +15,59 @@ public class S_DialogueManager : Manager
     [SerializeField]
     private float timePerWord = 0.5f;
 
-    public IEnumerator SendDialogue(SO_Dialogue dialogues)
+    [SerializeField]
+    private SO_Dialogue[] dialogueList;
+    [SerializeField]
+    private float[] timeDialogueList;
+    private int currentDialogue;
+
+    [SerializeField]
+    private List<SO_Dialogue> dialogueShowList;
+
+    private void Start()
     {
-        dialogueBox.SetActive(true);
-        for (int i = 0; i < dialogues.dialogue.Length; i++)
+        StartCoroutine(DialogueActivation());
+    }
+
+    private void Update()
+    {
+        if (S_ManagerManager.GetManager<S_TimeManager>().GetTime() >= timeDialogueList[currentDialogue])
         {
-            dialogueText.text = dialogues.dialogue[i];
-            yield return new WaitForSeconds(dialogues.dialogue[i].Length * timePerWord);
+            if (dialogueList[currentDialogue] != null)
+            {
+                SendDialogue(dialogueList[currentDialogue]);
+                dialogueList[currentDialogue] = null;
+                currentDialogue++;
+                currentDialogue = (int)Mathf.Clamp(currentDialogue, 0, timeDialogueList.Length - 1);
+            }
         }
-        dialogueBox.SetActive(false);
-        yield return null;
+    }
+
+    public void SendDialogue(SO_Dialogue dialogues)
+    {
+        dialogueShowList.Add(dialogues);
+    }
+
+    public IEnumerator DialogueActivation()
+    {
+        while (true)
+        {
+            if (dialogueShowList.Count > 0)
+            {
+                if (dialogueShowList[0] != null)
+                {
+                    var dialogues = dialogueShowList[0];
+                    dialogueBox.SetActive(true);
+                    for (int i = 0; i < dialogues.dialogue.Length; i++)
+                    {
+                        dialogueText.text = dialogues.dialogue[i];
+                        yield return new WaitForSeconds(dialogues.dialogue[i].Length * timePerWord);
+                    }
+                    dialogueBox.SetActive(false);
+                    dialogueShowList.RemoveAt(0);
+                }
+            }
+            yield return new WaitForSeconds(2f);
+        }
     }
 }

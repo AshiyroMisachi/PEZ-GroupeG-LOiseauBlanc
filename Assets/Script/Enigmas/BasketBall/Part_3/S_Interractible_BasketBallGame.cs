@@ -54,7 +54,7 @@ public class S_Interractible_BasketBallGame : Interractibles
         if (!isFinished && score >= finishScore)
         {
             isFinished = true;
-            StartCoroutine(S_ManagerManager.GetManager<S_DialogueManager>().SendDialogue(finishDialogue));
+            S_ManagerManager.GetManager<S_DialogueManager>().SendDialogue(finishDialogue);
 
             //Unlock Thing for train
         }
@@ -70,7 +70,7 @@ public class S_Interractible_BasketBallGame : Interractibles
         if (!firstInterract)
         {
             firstInterract = true;
-            StartCoroutine(S_ManagerManager.GetManager<S_DialogueManager>().SendDialogue(firstInterractDialogue));
+            S_ManagerManager.GetManager<S_DialogueManager>().SendDialogue(firstInterractDialogue);
         }
 
         if (playerInterract.GetObjectInHand() != null && ballBox != null && playerInterract.GetObjectInHand().gameObject == ballBox)

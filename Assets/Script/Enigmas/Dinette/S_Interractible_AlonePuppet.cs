@@ -19,7 +19,7 @@ public class S_Interractible_AlonePuppet : Interractibles
         {
             savedPuppet.SetActive(true);
             playerInterract.DestroyObjectInHand();
-            StartCoroutine(S_ManagerManager.GetManager<S_DialogueManager>().SendDialogue(finishDialogue));
+            S_ManagerManager.GetManager<S_DialogueManager>().SendDialogue(finishDialogue);
 
             //UNLOCK THIS FOR TRAIN
 
@@ -30,7 +30,7 @@ public class S_Interractible_AlonePuppet : Interractibles
         if (!firstInterract)
         {
             firstInterract = true;
-            StartCoroutine(S_ManagerManager.GetManager<S_DialogueManager>().SendDialogue(firstInterractDialogue));
+            S_ManagerManager.GetManager<S_DialogueManager>().SendDialogue(firstInterractDialogue);
         }
     }
 }
