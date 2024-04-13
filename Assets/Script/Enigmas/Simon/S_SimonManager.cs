@@ -5,7 +5,7 @@ using UnityEngine;
 public class S_SimonManager : MonoBehaviour
 {
     [SerializeField]
-    private bool activated, startSequenceDone, inSequence, sequenceDone;
+    private bool activated, startSequenceDone, inSequence, sequenceDone, isFinished;
 
     [SerializeField]
     private S_Interractible_SimonBuzzer[] buzzers;
@@ -26,7 +26,9 @@ public class S_SimonManager : MonoBehaviour
     }
     void Update()
     {
-        if (!activated)
+
+
+        if (!activated || isFinished)
         {
             return;
         }
@@ -45,8 +47,8 @@ public class S_SimonManager : MonoBehaviour
 
         if (currentSequence == lenghtSequence.Length)
         {
-            Debug.Log("Simon ended");
-            StartSetup();
+            isFinished = true;
+            StartCoroutine(EndLight());
         }
     }
 
@@ -71,7 +73,7 @@ public class S_SimonManager : MonoBehaviour
     {
         return activated;
     }
-    
+
     public bool GetInSequence()
     {
         return inSequence;
@@ -86,7 +88,7 @@ public class S_SimonManager : MonoBehaviour
     {
         currentSequenceList.Clear();
         inSequence = true;
-        for (int i = 0; i < lenghtSequence[currentSequence];i++)
+        for (int i = 0; i < lenghtSequence[currentSequence]; i++)
         {
             int randomBuzzer = Random.Range(0, buzzers.Length);
             StartCoroutine(buzzers[randomBuzzer].ActiveLight());
@@ -129,10 +131,10 @@ public class S_SimonManager : MonoBehaviour
         sequenceDone = false;
         playerSequence.Clear();
         yield return new WaitForSeconds(0.5f);
-        for (int i = 0; i < buzzers.Length ; i++)
+        for (int i = 0; i < buzzers.Length; i++)
         {
             StartCoroutine(buzzers[i].ErrorLight());
-            
+
         }
         yield return new WaitForSeconds(1f);
 
@@ -157,5 +159,17 @@ public class S_SimonManager : MonoBehaviour
         }
 
         return true;
+    }
+
+    private IEnumerator EndLight()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < buzzers.Length; j++)
+            {
+                StartCoroutine(buzzers[j].ActiveLight());
+                yield return new WaitForSeconds(0.25f);
+            }
+        }
     }
 }
