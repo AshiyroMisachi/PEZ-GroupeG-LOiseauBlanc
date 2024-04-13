@@ -374,10 +374,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectPosition: {fileID: 8424639818794082482}
   playerCamera: {fileID: 4473210041434195883}
-  interractRange: 500
+  interractRange: 3
   objectInHand: {fileID: 0}
   inHandPosition: {x: 0.43, y: -0.24, z: 0.67}
   inInspectionPosition: {x: 0, y: 0, z: 1}
+  inspectSpeed: 0
+  inspectZoomSpeed: 0
 --- !u!1001 &5654523796545582740
 PrefabInstance:
   m_ObjectHideFlags: 0

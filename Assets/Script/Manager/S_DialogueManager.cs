@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -31,6 +32,11 @@ public class S_DialogueManager : Manager
 
     private void Update()
     {
+        if (timeDialogueList.Length == 0)
+        {
+            return;
+        }
+
         if (S_ManagerManager.GetManager<S_TimeManager>().GetTime() >= timeDialogueList[currentDialogue])
         {
             if (dialogueList[currentDialogue] != null)
