@@ -23,7 +23,7 @@ public class S_Dinette_Button : MonoBehaviour
             return;
         }
 
-        actualNumbers = actualNumbers.LoopClamp(actualNumbers + 1, 0, 12);
+        actualNumbers = actualNumbers.LoopClamp(actualNumbers + 1, 0, 11);
         transform.Rotate(-buttonRotation, 0, 0);
     }
 }
