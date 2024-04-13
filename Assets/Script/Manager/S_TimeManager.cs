@@ -29,7 +29,10 @@ public class S_TimeManager : Manager
 
     //Reference to the AudioSource of the cukoo sound
     [SerializeField]
-    private AudioSource cukooClockAudio;
+    private AudioSource cukooClockAudio, policeSound;
+
+    [SerializeField]
+    private float policeTimer, policeTimerEnd;
 
     private void Start()
     {
@@ -45,7 +48,14 @@ public class S_TimeManager : Manager
             directionalLight.eulerAngles = Vector3.Lerp(startRotation, endRotation, time / maxTime);
         }
 
-        if (time > maxTime)
+
+        if (time > maxTime - policeTimerEnd)
+        {
+            policeSound.volume = Mathf.Lerp(0, 1, policeTimer/policeTimerEnd);
+            policeTimer += Time.deltaTime;
+        }
+
+        if (policeSound.volume >= 1)
         {
             EndGame();
         }
