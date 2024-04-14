@@ -58,13 +58,12 @@ public class S_PlayerInterract : MonoBehaviour
                     return;
                 }
             }
+        }
 
-            //SetupInspect Object in Hand
-            if (Input.GetMouseButtonDown(1) && objectInHand != null)
-            {
-                SetupInspect();
-                return;
-            }
+        //SetupInspect Object in Hand
+        if (Input.GetMouseButtonDown(1) && objectInHand != null)
+        {
+            SetupInspect();
             return;
         }
 
@@ -80,7 +79,10 @@ public class S_PlayerInterract : MonoBehaviour
             return;
         }
 
-        pointImage.SetActive(false);
+        if (playerManager.GetPlayerState() != PlayerState.Exploration)
+        {
+            pointImage.SetActive(false);
+        }
     }
 
     //Return the current Object in hand
