@@ -22,35 +22,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 87c4c4e87ab1b4d408356bc6312655d9, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.4913975
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 87c4c4e87ab1b4d408356bc6312655d9, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.6747816
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 87c4c4e87ab1b4d408356bc6312655d9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.23289542
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 87c4c4e87ab1b4d408356bc6312655d9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.49895692
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 87c4c4e87ab1b4d408356bc6312655d9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 63.583
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 87c4c4e87ab1b4d408356bc6312655d9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -92.466
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 87c4c4e87ab1b4d408356bc6312655d9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -156.688
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 87c4c4e87ab1b4d408356bc6312655d9, type: 3}
       propertyPath: m_Name
-      value: staticMesh_prop_Pirate (1)
+      value: PF_Launcher
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

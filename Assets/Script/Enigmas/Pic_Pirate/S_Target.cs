@@ -10,7 +10,7 @@ public class S_Target : MonoBehaviour
 
 
     private bool touched = false;
-    private bool turned = false;
+    public bool turned = false;
     private int incr = 0;
     public float speedRota = 1f;
 
@@ -52,7 +52,6 @@ public class S_Target : MonoBehaviour
     {
         if (collision.gameObject.tag == "Pirate")
         {
-            Debug.Log("touche");
             touched = true;
         }
     }
