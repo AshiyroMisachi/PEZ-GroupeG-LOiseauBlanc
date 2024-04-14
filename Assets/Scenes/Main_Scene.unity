@@ -11861,6 +11861,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 711035169485227991, guid: ca3df417a80fe4c4c83562232964c994, type: 3}
+      propertyPath: pointImage
+      value: 
+      objectReference: {fileID: 2052458469}
+    - target: {fileID: 711035169485227991, guid: ca3df417a80fe4c4c83562232964c994, type: 3}
       propertyPath: inspectSpeed
       value: 1
       objectReference: {fileID: 0}
