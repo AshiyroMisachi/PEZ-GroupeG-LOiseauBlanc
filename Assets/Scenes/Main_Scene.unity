@@ -1479,6 +1479,8 @@ MonoBehaviour:
   - {fileID: 647235550}
   - {fileID: 1575958572}
   listStickPosLocal: []
+  animator: {fileID: 991740221}
+  finalDoor: {fileID: 991740220}
 --- !u!114 &202935324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7222,7 +7224,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -7802182394084897893, guid: 7c15b916ac6f9ba47bb8d2dbef36c7e7, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2653925263858538809, guid: 7c15b916ac6f9ba47bb8d2dbef36c7e7, type: 3}
       propertyPath: m_LocalScale.z
@@ -16371,6 +16373,10 @@ PrefabInstance:
     - target: {fileID: 724248818719506024, guid: a6567c63062834946bbf64019e618777, type: 3}
       propertyPath: m_Name
       value: EndCable4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207555989883527368, guid: a6567c63062834946bbf64019e618777, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2412841197548506452, guid: a6567c63062834946bbf64019e618777, type: 3}
       propertyPath: m_Name

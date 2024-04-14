@@ -16,7 +16,9 @@ public class S_FinalGame : MonoBehaviour
     private int enleve;
 
     private bool enigmaCompleted = false;
-
+    public Animator animator;
+    public GameObject finalDoor;
+    //private bool state = false;
 
     // Start is called before the first frame update
     void Start()
@@ -128,6 +130,8 @@ public class S_FinalGame : MonoBehaviour
                 {
                     Debug.Log("Player a gagné");
                     enigmaCompleted = true;
+                    animator.SetTrigger("Open");
+
 
                 }
                 gameOn = false;
