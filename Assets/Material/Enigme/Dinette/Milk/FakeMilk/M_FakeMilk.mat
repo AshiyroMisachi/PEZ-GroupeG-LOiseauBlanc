@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Banc_standardSurface1_AlbedoTransparency
+  m_Name: M_FakeMilk
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -26,7 +26,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 36f78091c13832c4a88b267733f91f42, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2850a6cb42161944c8f38dbd3ef8cec3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -46,15 +46,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 8263787ca76fb7e45a0b1f3fbf5cabe0, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4e420372769e88448b9760c9b847df7c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 18642ff59454cbd4d8948dea27b6efe0, type: 3}
+        m_Texture: {fileID: 2800000, guid: a9823c9da79963a419725e446ff10fc7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: 46b7fa2a87b4fc74e8fb6da3f6e97e26, type: 3}
+        m_Texture: {fileID: 2800000, guid: b76d50b975d07214999062e02abe693a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
