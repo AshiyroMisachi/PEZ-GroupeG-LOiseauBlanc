@@ -69,7 +69,7 @@ public class S_TimeManager : Manager
 
     private void EndGame()
     {
-        //Stop the game
+        S_ManagerManager.GetManager<S_NavigationManager>().LaunchDefeat();
     }
 
     private IEnumerator ActivateCukooClock()
