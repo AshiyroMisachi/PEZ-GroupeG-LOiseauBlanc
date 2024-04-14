@@ -5912,10 +5912,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3741858241582359291, guid: 7bd34f4e4927a5840be3646b4d573b86, type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3741858241582359291, guid: 7bd34f4e4927a5840be3646b4d573b86, type: 3}
       propertyPath: m_Name
       value: PF_AlonePuppet
       objectReference: {fileID: 0}
