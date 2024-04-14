@@ -11,15 +11,22 @@ public class S_CheckRotationheart : Interractibles
     private GameObject heartItem, heartObject;
     private bool isActive;
     [SerializeField]
-    private Camera puzzleCamera; 
+    private Camera puzzleCamera;
     [SerializeField]
     private float inspectSpeed = 1, inspectZoomSpeed = 0;
+    private bool locked = false;
+    private bool enigmaCompleted = false;
 
 
 
 
     public void Update()
     {
+
+        if (!isActive)
+        {
+            return;
+        }
 
         //to quit the puzzle
         if (Input.GetKeyDown(KeyCode.P))
@@ -28,10 +35,7 @@ public class S_CheckRotationheart : Interractibles
         }
 
 
-        if (!isActive)
-        {
-            return;
-        }
+
 
 
 
@@ -39,12 +43,15 @@ public class S_CheckRotationheart : Interractibles
         {
 
 
+            if (!locked)
+            {
+                float x = Input.GetAxis("Horizontal") * inspectSpeed;
+                float z = Input.GetAxis("Vertical") * inspectSpeed;
+                float zoom = Input.GetAxis("Mouse ScrollWheel") * inspectZoomSpeed;
 
-            float x = Input.GetAxis("Horizontal") * inspectSpeed;
-            float z = Input.GetAxis("Vertical") * inspectSpeed;
-            float zoom = Input.GetAxis("Mouse ScrollWheel") * inspectZoomSpeed;
+                heartObject.transform.Rotate(x, 0, z, Space.Self);
+            }
 
-            heartObject.transform.Rotate(x, 0, z, Space.Self);
 
             //y a 90 ou 270
             //z  0 ou 180 = x
@@ -54,12 +61,15 @@ public class S_CheckRotationheart : Interractibles
             {
                 if ((heartObject.transform.localEulerAngles.x >= -10 && heartObject.transform.localEulerAngles.x <= 20) && (heartObject.transform.localEulerAngles.z >= -10 && heartObject.transform.localEulerAngles.z <= 10))
                 {
-                    Debug.Log("y");
+                    locked = true;
+                    enigmaCompleted = true;
                 }
 
                 if ((heartObject.transform.localEulerAngles.x >= 170 && heartObject.transform.localEulerAngles.x <= 190) && (heartObject.transform.localEulerAngles.z >= 170 && heartObject.transform.localEulerAngles.z <= 190))
                 {
-                    Debug.Log("y");
+                    locked = true;
+                    enigmaCompleted = true;
+
                 }
 
 
@@ -114,4 +124,7 @@ public class S_CheckRotationheart : Interractibles
         S_CameraFunction.LockCursor();
         playerManager.SetPlayerState(PlayerState.Exploration);
     }
+
+
+    public bool getEnigmaCompleted() {  return enigmaCompleted; }
 }

@@ -7,6 +7,8 @@ TagManager:
   - Pirate
   - gun
   - BasketBallGame_Basket
+  - Cable
+  - EndCable
   layers:
   - Default
   - TransparentFX

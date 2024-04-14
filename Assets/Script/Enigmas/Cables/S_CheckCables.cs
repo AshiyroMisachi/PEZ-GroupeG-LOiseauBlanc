@@ -19,16 +19,20 @@ public class S_CheckCables : Interractibles
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            SetupPuzzle();
-        }
+
+
 
 
         if (!isActive)
         {
             return;
         }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            SetupPuzzle();
+        }
+
+
 
     }
 
