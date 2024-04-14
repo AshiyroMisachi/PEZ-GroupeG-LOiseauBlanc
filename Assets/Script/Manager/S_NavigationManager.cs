@@ -15,19 +15,20 @@ public class S_NavigationManager : Manager
 
     public void LaunchVictory()
     {
-        LaunchScene("Victory_Screen");
+        StartCoroutine(LaunchScene("Victory_Screen"));
     }
 
     public void LaunchDefeat()
     {
-        LaunchScene("Defeat_Screen");
+        StartCoroutine(LaunchScene("Defeat_Screen"));
     }
 
     private IEnumerator LaunchScene(string sceneName)
     {
-        Destroy(gameObject);
         blackImage.GetComponent<Animator>().SetTrigger("FadeIn");
         yield return new WaitUntil(() => blackImage.GetComponent<Image>().color.a == 1);
         SceneManager.LoadScene(sceneName);
+        S_CameraFunction.LockCursor();
+        Destroy(gameObject);
     }
 }

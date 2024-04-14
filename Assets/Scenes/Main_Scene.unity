@@ -6258,6 +6258,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1380934310}
     m_Modifications:
+    - target: {fileID: -7802182394084897893, guid: 7c15b916ac6f9ba47bb8d2dbef36c7e7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2653925263858538809, guid: 7c15b916ac6f9ba47bb8d2dbef36c7e7, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.0110003
@@ -13967,6 +13971,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7401642347321755450, guid: ca3df417a80fe4c4c83562232964c994, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 7830223812447205434, guid: ca3df417a80fe4c4c83562232964c994, type: 3}
       propertyPath: m_Lightmapping
       value: 4
@@ -15217,7 +15225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 27532006778947246, guid: 1a1c7a14084782f42864c948b6de0316, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16.204
+      value: 16.078
       objectReference: {fileID: 0}
     - target: {fileID: 27532006778947246, guid: 1a1c7a14084782f42864c948b6de0316, type: 3}
       propertyPath: m_LocalRotation.w

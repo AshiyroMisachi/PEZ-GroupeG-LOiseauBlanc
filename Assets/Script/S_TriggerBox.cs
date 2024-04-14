@@ -13,7 +13,5 @@ public class S_TriggerBox : MonoBehaviour
         {
             triggerEvent.Invoke();
         }
-
-
     }
 }
