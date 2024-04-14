@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -30,6 +31,8 @@ public class S_PlayerInterract : MonoBehaviour
     [SerializeField]
     private float inspectSpeed, inspectZoomSpeed;
 
+    [SerializeField] private GameObject pointImage;
+
     // Update is called once per frame
     void Update()
     {
@@ -38,25 +41,31 @@ public class S_PlayerInterract : MonoBehaviour
         if (playerManager.GetPlayerState() == PlayerState.Exploration)
         {
             CheckInterractible();
-        }
-
-        if (objectInHand != null && playerManager.GetPlayerState() == PlayerState.Exploration)
-        {
-            //Drop the object in hand if pressed
-            //if (Input.GetButtonDown("Cancel"))
-            if (Input.GetKeyDown(KeyCode.P) && objectInHand != null)
+            if (objectInHand != null)
             {
-                DropObjectInHand();
-                return;
+                //Drop the object in hand if pressed
+                //if (Input.GetButtonDown("Cancel"))
+                if (Input.GetKeyDown(KeyCode.P) && objectInHand != null)
+                {
+                    DropObjectInHand();
+                    return;
+                }
+
+                //Use Object in Hand
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    objectInHand.Interraction();
+                    return;
+                }
             }
 
-            //Use Object in Hand
-            if (Input.GetKeyDown(KeyCode.E))
+            //SetupInspect Object in Hand
+            if (Input.GetMouseButtonDown(1) && objectInHand != null)
             {
-                objectInHand.Interraction();
+                SetupInspect();
                 return;
             }
-
+            return;
         }
 
         if (playerManager.GetPlayerState() == PlayerState.Inspect)
@@ -68,14 +77,10 @@ public class S_PlayerInterract : MonoBehaviour
                 objectInHand.InterractionInspection();
                 return;
             }
-        }
-
-        //SetupInspect Object in Hand
-        if (Input.GetMouseButtonDown(1) && objectInHand != null)
-        {
-            SetupInspect();
             return;
         }
+
+        pointImage.SetActive(false);
     }
 
     //Return the current Object in hand
@@ -105,7 +110,7 @@ public class S_PlayerInterract : MonoBehaviour
     }
 
     //Drop to the ground the current object in hand
-    public  void DropObjectInHand()
+    public void DropObjectInHand()
     {
         //The object is not a child of the player
         objectInHand.transform.parent = null;
@@ -124,31 +129,42 @@ public class S_PlayerInterract : MonoBehaviour
     //Check if the player click on a Interractible
     private void CheckInterractible()
     {
-        //If left click pressed
-        if (Input.GetButtonDown("Fire1") && Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out var info, interractRange))
+        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out var info, interractRange))
         {
-            //If the raycast collide a Collectible Object
-            if (info.transform.TryGetComponent<S_Interractible_Collectible>(out var collectible))
+            if (info.transform.GetComponent<Interractibles>() == null)
             {
-                //If no object in hand, set the item in hand
-                if (objectInHand == null)
+                pointImage.SetActive(false);
+                return;
+            }
+            //If left click pressed
+            if (Input.GetButtonDown("Fire1"))
+            {
+                //If the raycast collide a Collectible Object
+                if (info.transform.TryGetComponent<S_Interractible_Collectible>(out var collectible))
                 {
+                    //If no object in hand, set the item in hand
+                    if (objectInHand == null)
+                    {
+                        SetObjectInHand(collectible);
+                        return;
+                    }
+                    //Else, drop the current object in hand, and set to the new
+                    DropObjectInHand();
                     SetObjectInHand(collectible);
                     return;
                 }
-                //Else, drop the current object in hand, and set to the new
-                DropObjectInHand();
-                SetObjectInHand(collectible);
-                return;
-            }
 
-            //If the raycast collide a Interractible
-            if (info.transform.TryGetComponent<Interractibles>(out var interactible))
-            {
-                interactible.Interraction();
-                return;
+                //If the raycast collide a Interractible
+                if (info.transform.TryGetComponent<Interractibles>(out var interactible))
+                {
+                    interactible.Interraction();
+                    return;
+                }
             }
+            pointImage.SetActive(true);
+            return;
         }
+        pointImage.SetActive(false);
     }
 
     private void SetupInspect()
@@ -177,7 +193,7 @@ public class S_PlayerInterract : MonoBehaviour
         float z = Input.GetAxis("Vertical") * inspectSpeed;
         float zoom = Input.GetAxis("Mouse ScrollWheel") * inspectZoomSpeed;
 
-        objectPosition.transform.Rotate(x, 0, z , Space.Self);
+        objectPosition.transform.Rotate(x, 0, z, Space.Self);
         playerCamera.GetComponent<Camera>().fieldOfView = Mathf.Clamp(playerCamera.GetComponent<Camera>().fieldOfView + zoom, 30, 60);
     }
 }

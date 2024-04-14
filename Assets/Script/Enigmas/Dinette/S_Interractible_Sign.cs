@@ -36,13 +36,11 @@ public class S_Interractible_Sign : Interractibles
             isActive = true;
             playerManager.SetPlayerState(PlayerState.Puzzle);
             S_CameraFunction.SwitchCamera(puzzleCamera, playerManager.GetPlayerCamera());
-            S_CameraFunction.LockCursor();
             return;
         }
 
         isActive = false;
         S_CameraFunction.SwitchCamera(playerManager.GetPlayerCamera(), puzzleCamera);
-        S_CameraFunction.LockCursor();
         playerManager.SetPlayerState(PlayerState.Exploration);
     }
 }
