@@ -23,6 +23,8 @@ public class S_TimeManager : Manager
     private Vector3 startRotation, endRotation;
 
     [Header("Cukoo Clock")]
+
+    [SerializeField] private Animator cukooAnimator;
     [SerializeField]
     //The time between each cukoo activation, multiplied by 60 to be in minutes
     private float cukooTimer;
@@ -43,7 +45,7 @@ public class S_TimeManager : Manager
     {
         time = Time.time;
 
-        if (directionalLight != null )
+        if (directionalLight != null)
         {
             directionalLight.eulerAngles = Vector3.Lerp(startRotation, endRotation, time / maxTime);
         }
@@ -51,7 +53,7 @@ public class S_TimeManager : Manager
 
         if (time > maxTime - policeTimerEnd)
         {
-            policeSound.volume = Mathf.Lerp(0, 1, policeTimer/policeTimerEnd);
+            policeSound.volume = Mathf.Lerp(0, 1, policeTimer / policeTimerEnd);
             policeTimer += Time.deltaTime;
         }
 
@@ -78,8 +80,12 @@ public class S_TimeManager : Manager
         {
             //Animation and sound of the cuckooClock
             yield return new WaitForSeconds(cukooTimer);
-            Debug.Log("COUCOU");
-            cukooClockAudio.Play();
+            cukooAnimator.SetTrigger("Cukoo");
+            for (int i = 0; i < 3; i++)
+            {
+                cukooClockAudio.Play();
+                yield return new WaitUntil (() => !cukooClockAudio.isPlaying);
+            }
         }
     }
 }
