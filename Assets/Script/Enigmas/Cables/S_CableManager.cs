@@ -10,10 +10,11 @@ public class S_CableManager : MonoBehaviour
     public List<GameObject> lights;
     public GameObject projo;
     public S_SimonManager simonManager;
+    public bool isFinished;
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -28,18 +29,16 @@ public class S_CableManager : MonoBehaviour
 
         }
 
-
-        for (int i = 0;i < lights.Count; ++i)
+        if (!isFinished)
         {
-            lights[i].gameObject.SetActive(true);
+            isFinished = true;
+            for (int i = 0; i < lights.Count; ++i)
+            {
+                lights[i].gameObject.SetActive(true);
+            }
+            projo.SetActive(false);
+
+            simonManager.ActiveSimon();
         }
-        projo.SetActive(false);
-
-        simonManager.ActiveSimon();
-
-
     }
-
-
-
 }
