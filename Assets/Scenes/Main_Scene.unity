@@ -22503,7 +22503,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -7802182394084897893, guid: 7c15b916ac6f9ba47bb8d2dbef36c7e7, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2653925263858538809, guid: 7c15b916ac6f9ba47bb8d2dbef36c7e7, type: 3}
       propertyPath: m_LocalScale.z
