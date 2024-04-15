@@ -7,7 +7,9 @@ public class S_CableManager : MonoBehaviour
     // Start is called before the first frame update
 
     public List<S_RotateCable> RotateCables;
-    private bool enigmaCompleted = false;
+    public List<GameObject> lights;
+    public GameObject projo;
+    public S_SimonManager simonManager;
 
     void Start()
     {
@@ -25,11 +27,19 @@ public class S_CableManager : MonoBehaviour
             }
 
         }
-        enigmaCompleted=true;
-        
+
+
+        for (int i = 0;i < lights.Count; ++i)
+        {
+            lights[i].gameObject.SetActive(true);
+        }
+        projo.SetActive(false);
+
+        simonManager.ActiveSimon();
+
+
     }
 
 
-    public bool getEnigmaCompleted() { return enigmaCompleted; }
 
 }

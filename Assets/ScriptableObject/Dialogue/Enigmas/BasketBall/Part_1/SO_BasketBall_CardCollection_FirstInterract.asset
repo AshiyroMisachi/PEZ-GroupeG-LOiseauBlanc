@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: SO_BasketBall_CardCollection_FirstInterract
   m_EditorClassIdentifier: 
   dialogue:
-  - C'est une de mes collection de carte
-  - Celle ci est sur des joueurs de basket
-  - "Elle n'est pas tr\xE8s bien rang\xE9, tu devrai pouvoir arranger cela"
+  - C'est une de mes collection de cartes
+  - Celle-ci est sur des joueurs de basket
+  - "Elle n'est pas tr\xE8s bien rang\xE9e, tu devrais pouvoir arranger cela"
