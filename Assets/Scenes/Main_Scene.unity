@@ -13599,6 +13599,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.2130274, y: 2.8277366, z: 1.0108562}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1610893892 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4492002803241198194, guid: 988eb4fa924b2394a932dd65de3aa17f, type: 3}
+  m_PrefabInstance: {fileID: 1885534831776816349}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1613212735
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17015,7 +17020,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2023557648}
-  - component: {fileID: 2023557647}
   m_Layer: 0
   m_Name: TrainManager
   m_TagString: Untagged
@@ -17023,25 +17027,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2023557647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2023557646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c08cd152e9122084ba0cebe88354783c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  train: {fileID: 2081835618}
-  stopPoints:
-  - {fileID: 1700531924}
-  - {fileID: 1036080989}
-  stopPointReached: 
-  currentPoint: 0
-  stopPointBlocked: 
 --- !u!4 &2023557648
 Transform:
   m_ObjectHideFlags: 0
@@ -17940,19 +17925,41 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4492002803241198194, guid: 988eb4fa924b2394a932dd65de3aa17f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1885534831776816351}
   m_SourcePrefab: {fileID: 100100000, guid: 988eb4fa924b2394a932dd65de3aa17f, type: 3}
 --- !u!114 &1885534831776816350 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8669713751333223977, guid: 988eb4fa924b2394a932dd65de3aa17f, type: 3}
   m_PrefabInstance: {fileID: 1885534831776816349}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1610893892}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ef1fdf6d581a4444928d589e339b46d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1885534831776816351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610893892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08cd152e9122084ba0cebe88354783c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  train: {fileID: 2081835618}
+  stopPoints:
+  - {fileID: 1700531924}
+  - {fileID: 1036080989}
+  stopPointReached: 
+  currentPoint: 0
+  stopPointBlocked: 
 --- !u!1001 &1900656250017850972
 PrefabInstance:
   m_ObjectHideFlags: 0
