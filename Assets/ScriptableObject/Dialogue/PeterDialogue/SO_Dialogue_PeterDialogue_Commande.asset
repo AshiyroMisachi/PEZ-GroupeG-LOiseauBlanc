@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88f55889c4f658c4fbdbda79b759ac78, type: 3}
+  m_Name: SO_Dialogue_PeterDialogue_Commande
+  m_EditorClassIdentifier: 
+  dialogue:
+  - Bon parlons un peu des touches.
+  - "Utilise ZQSD pour te d\xE9placer."
+  - "Clique droit te permet d'int\xE9ragir avec objets."
+  - "Clique gauche te permet de regarde de plus pr\xE8s les objets en mains. "
+  - "Tu peux \xE9galement utilis\xE9 ta molette pour zoom\xE9 en inspection."
+  - "La touche P te permet de d\xE9poser ton objet au sol et de sortir des puzzles."
+  - "Et enfin, ta touche E te permet d'utilis\xE9 l'objet en main."
