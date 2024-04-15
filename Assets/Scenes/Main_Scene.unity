@@ -16943,7 +16943,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8908432911390278191, guid: a6567c63062834946bbf64019e618777, type: 3}
       propertyPath: m_Name
-      value: PF_ELectrical_Panel
+      value: Enigme Cables
       objectReference: {fileID: 0}
     - target: {fileID: 8912720048245811210, guid: a6567c63062834946bbf64019e618777, type: 3}
       propertyPath: m_Name

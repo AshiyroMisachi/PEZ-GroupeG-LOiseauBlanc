@@ -47,7 +47,6 @@ public class S_FinalGame : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Keypad1))
                 {
 
-                    Debug.Log("enleve 1");
                     StartCoroutine(deleteStickPlayer(batonnetsRestants - 1));
                     batonnetsRestants--;
 
@@ -84,7 +83,7 @@ public class S_FinalGame : MonoBehaviour
             if (!enemyPlayed && !turn)
             {
 
-                Debug.Log("reste " + batonnetsRestants);
+               // Debug.Log("reste " + batonnetsRestants);
 
                 if (batonnetsRestants > 8)
                 {
@@ -108,7 +107,7 @@ public class S_FinalGame : MonoBehaviour
 
                 }
                 batonnetsRestants = batonnetsRestants - enleve;
-                Debug.Log("IA enleve " + enleve);
+                //Debug.Log("IA enleve " + enleve);
             }
 
 
@@ -121,14 +120,14 @@ public class S_FinalGame : MonoBehaviour
                 enemyPlayed = true;
                 if (turn)
                 {
-                    Debug.Log("IA a gagné");
+                    //Debug.Log("IA a gagné");
 
                     StartCoroutine(ResetGame());
 
                 }
                 else
                 {
-                    Debug.Log("Player a gagné");
+                    //Debug.Log("Player a gagné");
                     enigmaCompleted = true;
                     animator.SetTrigger("Open");
 

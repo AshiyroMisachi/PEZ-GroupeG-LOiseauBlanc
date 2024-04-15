@@ -43,8 +43,6 @@ public class S_CheckCables : Interractibles
 
     public override void Interraction()
     {
-      //  var playerInterract = S_ManagerManager.GetManager<S_PlayerManager>().GetPlayer().GetComponent<S_PlayerInterract>();
-
         SetupPuzzle();
     }
 

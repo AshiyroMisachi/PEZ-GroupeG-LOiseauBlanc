@@ -33,9 +33,9 @@ public class S_ICollectible_Heart : S_Interractible_Collectible
     {
         rotationObjectInHand = playerInterract.GetObjectPosition();
 
-        Debug.Log("x = " + rotationObjectInHand.transform.localEulerAngles.x);
-        Debug.Log("y = " + rotationObjectInHand.transform.localEulerAngles.y);
-        Debug.Log("z = " + rotationObjectInHand.transform.localEulerAngles.z);
+       // Debug.Log("x = " + rotationObjectInHand.transform.localEulerAngles.x);
+        //Debug.Log("y = " + rotationObjectInHand.transform.localEulerAngles.y);
+        //Debug.Log("z = " + rotationObjectInHand.transform.localEulerAngles.z);
         var x = rotationObjectInHand.transform.localEulerAngles.x;
         var y = rotationObjectInHand.transform.localEulerAngles.y;
         var z = rotationObjectInHand.transform.localEulerAngles.z;

@@ -11,7 +11,6 @@ public class S_EndCable : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("ici");
         if (other.tag == "Cable")
         {
             var cable = other.GetComponent<S_RotateCable>();

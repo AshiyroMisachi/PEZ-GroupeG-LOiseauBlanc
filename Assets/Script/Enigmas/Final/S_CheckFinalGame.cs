@@ -34,7 +34,6 @@ public class S_CheckFinalGame : Interractibles
 
     public override void Interraction()
     {
-        //  var playerInterract = S_ManagerManager.GetManager<S_PlayerManager>().GetPlayer().GetComponent<S_PlayerInterract>();
 
         SetupPuzzle();
 
