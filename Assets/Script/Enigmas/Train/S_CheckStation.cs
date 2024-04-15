@@ -45,6 +45,7 @@ public class S_CheckStation : MonoBehaviour
         {
             if (trainManager.currentPos > id)
             {
+
                 trainManager.splineTrain.Play();
                 trainManager.splineWagon1.Play();
                 trainManager.splineWagon2.Play();

@@ -42,7 +42,7 @@ public class S_CheckFinalGame : Interractibles
 
 
 
-    private void SetupPuzzle()
+    public void SetupPuzzle()
     {
         var playerManager = S_ManagerManager.GetManager<S_PlayerManager>();
         this.GetComponent<BoxCollider>().enabled = !this.GetComponent<BoxCollider>().enabled;
