@@ -1908,7 +1908,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ffe25bcefd5673c48971c65fdf14bb9e, type: 2}
   timeDialogueList:
   - 5
-  dialogueShowList: []
+  dialogueShowList:
+  - {fileID: 11400000, guid: ffe25bcefd5673c48971c65fdf14bb9e, type: 2}
 --- !u!82 &1319418712
 AudioSource:
   m_ObjectHideFlags: 0
