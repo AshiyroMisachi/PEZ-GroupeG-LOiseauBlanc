@@ -62,13 +62,17 @@ public class S_CheckRotationheart : Interractibles
                 if ((heartObject.transform.localEulerAngles.x >= -10 && heartObject.transform.localEulerAngles.x <= 20) && (heartObject.transform.localEulerAngles.z >= -10 && heartObject.transform.localEulerAngles.z <= 10))
                 {
                     locked = true;
-                    enigmaCompleted = true;
+                    S_ManagerManager.GetManager<S_Train>().isEnigmaCompleted(1);
+                    SetupPuzzle();
+
                 }
 
                 if ((heartObject.transform.localEulerAngles.x >= 170 && heartObject.transform.localEulerAngles.x <= 190) && (heartObject.transform.localEulerAngles.z >= 170 && heartObject.transform.localEulerAngles.z <= 190))
                 {
                     locked = true;
-                    enigmaCompleted = true;
+                    S_ManagerManager.GetManager<S_Train>().isEnigmaCompleted(1);
+                    SetupPuzzle();
+
 
                 }
 

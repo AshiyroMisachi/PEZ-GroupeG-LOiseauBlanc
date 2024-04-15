@@ -14,7 +14,7 @@ public class S_FinalGame : MonoBehaviour
     public List<Vector3> listStickPosLocal = new List<Vector3>();
     private int batonnetsRestants;
     private int enleve;
-
+    public S_CheckFinalGame checkFinal;
     private bool enigmaCompleted = false;
     public Animator animator;
     public GameObject finalDoor;
@@ -123,6 +123,8 @@ public class S_FinalGame : MonoBehaviour
                     //Debug.Log("IA a gagné");
 
                     StartCoroutine(ResetGame());
+                    checkFinal.SetupPuzzle();
+
 
                 }
                 else

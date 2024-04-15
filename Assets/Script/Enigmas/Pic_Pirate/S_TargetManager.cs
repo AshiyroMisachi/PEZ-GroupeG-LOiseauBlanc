@@ -6,7 +6,7 @@ public class S_TargetManager : MonoBehaviour
 {
 
     public List<S_Target> targets = new List<S_Target>();
-    private bool enigmaCompleted = false;
+    public S_ManagerManager manager;
 
     // Start is called before the first frame update
     void Start()
@@ -25,9 +25,8 @@ public class S_TargetManager : MonoBehaviour
             }
 
         }
-        enigmaCompleted = true;
+        S_ManagerManager.GetManager<S_Train>().isEnigmaCompleted(0);
     }
 
-    public bool getEnigmaCompleted() { return enigmaCompleted; }
-
+ 
 }

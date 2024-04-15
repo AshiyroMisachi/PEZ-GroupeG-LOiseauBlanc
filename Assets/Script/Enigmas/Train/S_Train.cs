@@ -10,6 +10,7 @@ public class S_Train : Manager
     public int currentPos = 0;
     public List<GameObject> stopPoints = new List<GameObject>();
     public List<bool> stopPointFree = new List<bool>();
+   // private bool finsih;
 
 
     void Start()
@@ -36,6 +37,7 @@ public class S_Train : Manager
             currentPos++;
 
         }
+
 
         
 
