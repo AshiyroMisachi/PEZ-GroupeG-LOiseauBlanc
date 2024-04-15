@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - Bienvenue dans mon manoir.
-  - Tu n'es pas vraiment le bienvenue.
+  - Tu n'es pas vraiment le bienvenu.
   - "J'ai d\xE9j\xE0 appel\xE9 la police, ils seront l\xE0 dans 30 minutes."
   - Le manoir est loin de la ville heureusement pour toi.
   - "Je veux bien te donner une chance, si tu r\xE9sous toutes les \xE9nigmes pr\xE9sentes

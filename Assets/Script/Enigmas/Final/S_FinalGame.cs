@@ -18,6 +18,9 @@ public class S_FinalGame : MonoBehaviour
     private bool enigmaCompleted = false;
     public Animator animator;
     public GameObject finalDoor;
+    [SerializeField]
+    private SO_Dialogue winDialogue,lossDialogue;
+
     //private bool state = false;
 
     // Start is called before the first frame update
@@ -114,13 +117,15 @@ public class S_FinalGame : MonoBehaviour
 
 
             //fin du jeu
-            if (batonnetsRestants <= 0)
+            if (batonnetsRestants <= 0 && !enigmaCompleted)
             {
+                enigmaCompleted = true;
                 playerPlayed = false;
                 enemyPlayed = true;
                 if (turn)
                 {
                     //Debug.Log("IA a gagné");
+                    S_ManagerManager.GetManager<S_DialogueManager>().SendDialogue(lossDialogue);
 
                     StartCoroutine(ResetGame());
                     checkFinal.SetupPuzzle();
@@ -129,6 +134,8 @@ public class S_FinalGame : MonoBehaviour
                 }
                 else
                 {
+                    S_ManagerManager.GetManager<S_DialogueManager>().SendDialogue(winDialogue);
+
                     //Debug.Log("Player a gagné");
                     enigmaCompleted = true;
                     animator.SetTrigger("Open");
@@ -160,6 +167,7 @@ public class S_FinalGame : MonoBehaviour
 
         playerPlayed = false;
         turn = true;
+        enigmaCompleted = false;
 
 
 

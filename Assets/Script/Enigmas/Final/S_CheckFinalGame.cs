@@ -7,10 +7,12 @@ public class S_CheckFinalGame : Interractibles
 
 
     [SerializeField]
-    private bool isActive;
+    private bool isActive, firstInteract;
     [SerializeField]
     private Camera puzzleCamera;
     public S_FinalGame finalGame;
+    [SerializeField]
+    private SO_Dialogue firstInterractDialogue;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +37,17 @@ public class S_CheckFinalGame : Interractibles
     public override void Interraction()
     {
 
+
+
+
         SetupPuzzle();
+
+        if (!firstInteract)
+        {
+            firstInteract = true;
+            S_ManagerManager.GetManager<S_DialogueManager>().SendDialogue(firstInterractDialogue);
+        }
+
 
         finalGame.gameOn = true;
     }

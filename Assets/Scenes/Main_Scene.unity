@@ -2118,6 +2118,8 @@ MonoBehaviour:
   checkFinal: {fileID: 0}
   animator: {fileID: 991740221}
   finalDoor: {fileID: 991740220}
+  winDialogue: {fileID: 11400000, guid: d76addcc22fa6494facd7e301e0bb5b0, type: 2}
+  lossDialogue: {fileID: 11400000, guid: 4c9c4dcb8ad770d4689317cb2d230000, type: 2}
 --- !u!114 &202935324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2131,8 +2133,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
+  firstInteract: 0
   puzzleCamera: {fileID: 1003504823}
   finalGame: {fileID: 202935323}
+  firstInterractDialogue: {fileID: 11400000, guid: ca9e2622140c8974982ffd3b0b983dc7, type: 2}
 --- !u!65 &202935325
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22438,7 +22442,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -7802182394084897893, guid: 7c15b916ac6f9ba47bb8d2dbef36c7e7, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2653925263858538809, guid: 7c15b916ac6f9ba47bb8d2dbef36c7e7, type: 3}
       propertyPath: m_LocalScale.z
