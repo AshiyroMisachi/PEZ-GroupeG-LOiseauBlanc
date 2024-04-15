@@ -335,7 +335,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 3
   m_Height: 2.21
-  m_Radius: 0.4
+  m_Radius: 0.3
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -380,6 +380,7 @@ MonoBehaviour:
   inInspectionPosition: {x: 0, y: 0, z: 1}
   inspectSpeed: 0
   inspectZoomSpeed: 0
+  pointImage: {fileID: 0}
 --- !u!1001 &5654523796545582740
 PrefabInstance:
   m_ObjectHideFlags: 0
