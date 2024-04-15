@@ -20,13 +20,13 @@ public class S_DialogueManager : Manager
     private SO_Dialogue[] dialogueList;
     [SerializeField]
     private float[] timeDialogueList;
-    private int currentDialogue = 0;
+    private int currentDialogue;
 
+    [SerializeField]
     private List<SO_Dialogue> dialogueShowList;
 
     private void Start()
     {
-        dialogueShowList = new List<SO_Dialogue>();
         StartCoroutine(DialogueActivation());
     }
 
