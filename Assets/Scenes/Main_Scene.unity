@@ -20494,7 +20494,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5732296188500454604, guid: 988eb4fa924b2394a932dd65de3aa17f, type: 3}
       propertyPath: cukooTimer
-      value: 180
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 5732296188500454604, guid: 988eb4fa924b2394a932dd65de3aa17f, type: 3}
       propertyPath: cukooAnimator
