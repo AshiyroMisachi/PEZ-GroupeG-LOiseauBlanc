@@ -10,15 +10,16 @@ public class S_Train : Manager
     public int currentPos = 0;
     public List<GameObject> stopPoints = new List<GameObject>();
     public List<bool> stopPointFree = new List<bool>();
-   // private bool finsih;
+    public Animator animator;
+    public bool open = false;
 
 
     void Start()
     {
 
-        splineTrain.Pause();
-        splineWagon1.Pause();
-        splineWagon2.Pause();
+        splineTrain.Play();
+        splineWagon1.Play();
+        splineWagon2.Play();
 
         for(int i = 0;i < stopPoints.Count; i++)
         {
@@ -39,8 +40,13 @@ public class S_Train : Manager
         }
 
 
-        
 
+        if (currentPos >= 5 && !open)
+        {
+            open = true;
+            animator.SetTrigger("Open");
+
+        }
 
 
         
