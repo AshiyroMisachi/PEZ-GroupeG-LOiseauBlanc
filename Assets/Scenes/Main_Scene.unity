@@ -16831,8 +16831,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1985036767}
     - target: {fileID: 6683950092604680884, guid: 988eb4fa924b2394a932dd65de3aa17f, type: 3}
-      propertyPath: dialogueShowList.Array.size
+      propertyPath: dialogueList.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683950092604680884, guid: 988eb4fa924b2394a932dd65de3aa17f, type: 3}
+      propertyPath: dialogueList.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: ffe25bcefd5673c48971c65fdf14bb9e, type: 2}
+    - target: {fileID: 6683950092604680884, guid: 988eb4fa924b2394a932dd65de3aa17f, type: 3}
+      propertyPath: dialogueShowList.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6683950092604680884, guid: 988eb4fa924b2394a932dd65de3aa17f, type: 3}
       propertyPath: timeDialogueList.Array.size
@@ -16841,7 +16849,7 @@ PrefabInstance:
     - target: {fileID: 6683950092604680884, guid: 988eb4fa924b2394a932dd65de3aa17f, type: 3}
       propertyPath: dialogueShowList.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: ffe25bcefd5673c48971c65fdf14bb9e, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 6683950092604680884, guid: 988eb4fa924b2394a932dd65de3aa17f, type: 3}
       propertyPath: timeDialogueList.Array.data[0]
       value: 5
