@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SO_Dialogue_PeterDialogue_003
   m_EditorClassIdentifier: 
   dialogue:
-  - "Je pense que tu n'a bient\xF4t plus de temps."
-  - "Tu devrai songer \xE0 te d\xE9p\xE9cher. "
+  - "Je pense que tu n'as bient\xF4t plus de temps."
+  - "Tu devrais songer \xE0 te d\xE9p\xE9cher. "

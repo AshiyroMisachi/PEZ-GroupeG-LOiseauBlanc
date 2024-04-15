@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SO_Dialogue_PeterDialogue_004
   m_EditorClassIdentifier: 
   dialogue:
-  - "Malheureusement la police est arriv\xE9 avant que tu ne t'\xE9chappe."
-  - "Je suis un peu d\xE9\xE7u mais tu n'a que ce que tu m\xE9rite au fond."
+  - "Malheureusement la police est arriv\xE9e avant que tu ne t'\xE9chappe."
+  - "Je suis un peu d\xE9\xE7u mais tu n'as que ce que tu m\xE9rites au fond."

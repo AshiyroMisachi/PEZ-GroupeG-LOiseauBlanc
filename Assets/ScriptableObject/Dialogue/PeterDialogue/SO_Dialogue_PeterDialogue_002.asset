@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SO_Dialogue_PeterDialogue_002
   m_EditorClassIdentifier: 
   dialogue:
-  - "J'esp\xE8re que tu n'a pas oublier que tu es chronom\xE9tr\xE9."
+  - "J'esp\xE8re que tu n'a pas oubli\xE9 que tu es chronom\xE9tr\xE9."
   - Le temps passe, le temps passe...
