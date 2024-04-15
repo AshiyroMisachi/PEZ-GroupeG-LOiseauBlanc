@@ -9,6 +9,7 @@ TagManager:
   - BasketBallGame_Basket
   - Cable
   - EndCable
+  - Train
   layers:
   - Default
   - TransparentFX
