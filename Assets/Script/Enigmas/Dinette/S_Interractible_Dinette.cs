@@ -16,6 +16,8 @@ public class S_Interractible_Dinette : Interractibles
     [SerializeField]
     private Animator doorAnimator;
 
+    [SerializeField] private AudioSource endSound;
+
     private void Update()
     {
         if (!isActive) return;   
@@ -27,6 +29,7 @@ public class S_Interractible_Dinette : Interractibles
 
         if (VerifyCorrectButton())
         {
+            endSound.Play();
             isFisished = true;
             SetupPuzzle();
             doorAnimator.SetTrigger("Open");
