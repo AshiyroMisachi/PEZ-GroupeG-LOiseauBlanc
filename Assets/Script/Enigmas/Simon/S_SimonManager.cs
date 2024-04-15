@@ -19,6 +19,7 @@ public class S_SimonManager : MonoBehaviour
     [SerializeField]
     private List<int> startCurrentList, currentSequenceList, playerSequence;
 
+    [SerializeField] private SO_Dialogue endDialogue;
 
     private void Start()
     {
@@ -50,6 +51,7 @@ public class S_SimonManager : MonoBehaviour
             isFinished = true;
             StartCoroutine(EndLight());
             S_ManagerManager.GetManager<S_Train>().isEnigmaCompleted(3);
+            S_ManagerManager.GetManager<S_DialogueManager>().SendDialogue(endDialogue);
         }
     }
 

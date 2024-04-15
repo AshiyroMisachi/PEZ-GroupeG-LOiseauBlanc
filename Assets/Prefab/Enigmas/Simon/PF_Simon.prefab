@@ -1249,6 +1249,7 @@ MonoBehaviour:
   startSequenceDone: 0
   inSequence: 0
   sequenceDone: 1
+  isFinished: 0
   buzzers:
   - {fileID: 7298649844587645302}
   - {fileID: 1221539946961328171}
@@ -1259,6 +1260,7 @@ MonoBehaviour:
   startCurrentList: 03000000000000000200000001000000
   currentSequenceList: 
   playerSequence: 
+  endDialogue: {fileID: 11400000, guid: c1501855a6c6e544599589db50db916b, type: 2}
 --- !u!1 &7374173378569623510
 GameObject:
   m_ObjectHideFlags: 0
