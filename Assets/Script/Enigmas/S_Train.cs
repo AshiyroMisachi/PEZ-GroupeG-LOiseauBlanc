@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class S_Train : MonoBehaviour
@@ -18,7 +19,7 @@ public class S_Train : MonoBehaviour
         {
             stopPointReached.Add(false);
         }
-        for(int i = 0;i < 5; i++)
+        for(int i = 0;i < stopPoints.Count; i++)
         {
             stopPointBlocked.Add(true);
         }
@@ -27,7 +28,23 @@ public class S_Train : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        for(int i=0; i < stopPoints.Count;i++)
+        {
+            if (!stopPointBlocked[i]) 
+            {
+
+                train.transform.position = Vector3.MoveTowards(train.transform.position, stopPoints[i].transform.position,0.01f);
+            }
+        }
 
         
     }
+
+
+    public void isEnigmaCompleted(int id)
+    {
+        stopPointBlocked[id] = true;
+        return;
+    }
+
 }
