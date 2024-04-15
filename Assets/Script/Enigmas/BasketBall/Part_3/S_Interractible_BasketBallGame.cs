@@ -57,6 +57,7 @@ public class S_Interractible_BasketBallGame : Interractibles
             S_ManagerManager.GetManager<S_DialogueManager>().SendDialogue(finishDialogue);
 
             //Unlock Thing for train
+            S_ManagerManager.GetManager<S_Train>().isEnigmaCompleted(4);
         }
 
         LaunchBall();

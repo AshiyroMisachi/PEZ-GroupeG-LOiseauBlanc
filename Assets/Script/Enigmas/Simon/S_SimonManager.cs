@@ -49,6 +49,7 @@ public class S_SimonManager : MonoBehaviour
         {
             isFinished = true;
             StartCoroutine(EndLight());
+            S_ManagerManager.GetManager<S_Train>().isEnigmaCompleted(3);
         }
     }
 
