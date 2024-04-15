@@ -20428,7 +20428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5732296188500454604, guid: 988eb4fa924b2394a932dd65de3aa17f, type: 3}
       propertyPath: cukooTimer
-      value: 180
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 5732296188500454604, guid: 988eb4fa924b2394a932dd65de3aa17f, type: 3}
       propertyPath: cukooAnimator
@@ -20448,19 +20448,51 @@ PrefabInstance:
       objectReference: {fileID: 1985036767}
     - target: {fileID: 6683950092604680884, guid: 988eb4fa924b2394a932dd65de3aa17f, type: 3}
       propertyPath: dialogueList.Array.size
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6683950092604680884, guid: 988eb4fa924b2394a932dd65de3aa17f, type: 3}
       propertyPath: dialogueList.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: ffe25bcefd5673c48971c65fdf14bb9e, type: 2}
     - target: {fileID: 6683950092604680884, guid: 988eb4fa924b2394a932dd65de3aa17f, type: 3}
+      propertyPath: dialogueList.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 036b6501e02cb0143a7c099bbb955348, type: 2}
+    - target: {fileID: 6683950092604680884, guid: 988eb4fa924b2394a932dd65de3aa17f, type: 3}
+      propertyPath: dialogueList.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 62f61eac29ebc504a83f683344a439fb, type: 2}
+    - target: {fileID: 6683950092604680884, guid: 988eb4fa924b2394a932dd65de3aa17f, type: 3}
+      propertyPath: dialogueList.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: dac3602e1d38bbf4c8b2898d8cc58842, type: 2}
+    - target: {fileID: 6683950092604680884, guid: 988eb4fa924b2394a932dd65de3aa17f, type: 3}
+      propertyPath: dialogueList.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4bcfb1197a42c684ebeb731e45de08bb, type: 2}
+    - target: {fileID: 6683950092604680884, guid: 988eb4fa924b2394a932dd65de3aa17f, type: 3}
       propertyPath: timeDialogueList.Array.size
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6683950092604680884, guid: 988eb4fa924b2394a932dd65de3aa17f, type: 3}
       propertyPath: timeDialogueList.Array.data[0]
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683950092604680884, guid: 988eb4fa924b2394a932dd65de3aa17f, type: 3}
+      propertyPath: timeDialogueList.Array.data[1]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683950092604680884, guid: 988eb4fa924b2394a932dd65de3aa17f, type: 3}
+      propertyPath: timeDialogueList.Array.data[2]
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683950092604680884, guid: 988eb4fa924b2394a932dd65de3aa17f, type: 3}
+      propertyPath: timeDialogueList.Array.data[3]
+      value: 1200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683950092604680884, guid: 988eb4fa924b2394a932dd65de3aa17f, type: 3}
+      propertyPath: timeDialogueList.Array.data[4]
+      value: 1770
       objectReference: {fileID: 0}
     - target: {fileID: 7077193251858585281, guid: 988eb4fa924b2394a932dd65de3aa17f, type: 3}
       propertyPath: player
