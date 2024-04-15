@@ -22,7 +22,7 @@ public class S_Interractible_AlonePuppet : Interractibles
             S_ManagerManager.GetManager<S_DialogueManager>().SendDialogue(finishDialogue);
 
             //UNLOCK THIS FOR TRAIN
-
+            S_ManagerManager.GetManager<S_Train>().isEnigmaCompleted(2);
 
             return;
         }
